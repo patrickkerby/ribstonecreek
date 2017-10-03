@@ -107,3 +107,15 @@ if ( ! function_exists( 'understrap_post_nav' ) ) :
 		<?php
 	}
 endif;
+
+// Redirect Beer Single Pages to Beer Archive
+
+add_action( 'template_redirect', 'rsc_redirect_post' );
+
+function rsc_redirect_post() {
+  $queried_post_type = get_query_var('post_type');
+  if ( is_single() && 'beer' ==  $queried_post_type ) {
+    wp_redirect( home_url( 'beer', 'relative' ), 301 );
+    exit;
+  }
+}
