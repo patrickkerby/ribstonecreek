@@ -119,3 +119,16 @@ function rsc_redirect_post() {
     exit;
   }
 }
+
+
+// Add ACF Options Page
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
+
+register_nav_menus( array(
+	'mobile_menu' => 'Mobile Menu',
+	'footer_menu' => 'Footer Menu',
+) );
