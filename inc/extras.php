@@ -132,3 +132,12 @@ register_nav_menus( array(
 	'mobile_menu' => 'Mobile Menu',
 	'footer_menu' => 'Footer Menu',
 ) );
+
+
+// Make SVGs Work
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
