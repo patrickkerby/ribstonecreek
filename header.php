@@ -36,7 +36,7 @@ $overlay = get_field('overlay');
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
 		'understrap' ); ?></a>
 
-		<nav class="navbar navbar-toggleable-md row no-gutter navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay; ?>), rgba(45,51,55,0.<?php echo $overlay; ?>)), url('<?php echo $hero; ?>'); background-size: cover;">
+		<nav class="navbar navbar-expand-md row no-gutter navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay; ?>), rgba(45,51,55,0.<?php echo $overlay; ?>)), url('<?php echo $hero; ?>');">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container">
@@ -51,12 +51,12 @@ $overlay = get_field('overlay');
 
 						<?php if ( is_front_page() && is_home() ) : ?>
 
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-							
+							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>							
 						<?php else : ?>
 
 							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						
+							<h1 class="page-title"><?php the_title() ?></h1>
+				          
 						<?php endif; ?>
 						
 					
@@ -77,7 +77,7 @@ $overlay = get_field('overlay');
 						<?php wp_nav_menu(
 							array(
 								'theme_location'  => 'primary',
-									'menu_class'      => 'navbar-nav',
+								'menu_class'      => 'navbar-nav',
 								'fallback_cb'     => '',
 								'menu_id'         => 'hamburger-menu',
 								'walker'          => new WP_Bootstrap_Navwalker(),

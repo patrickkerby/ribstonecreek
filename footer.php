@@ -29,9 +29,9 @@ $footer_logo = get_field( 'footer_logo', 'option' );
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 
-		<div class="row">
+		<div class="row justify-content-md-center">
 
-			<div class="col-md-8 offset-md-2">
+			<div class="col-md-10">
 
 				<footer class="site-footer row" id="colophon">
 

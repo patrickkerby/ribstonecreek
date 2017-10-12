@@ -9140,16 +9140,45 @@ p, ul, ul li, a, div {
   letter-spacing: 0;
   line-height: 33px; }
 
-ul li {
+#content ul li {
   border-bottom: solid 3px #f5f5f5; }
-  ul li:nth-last-child(1) {
+  #content ul li:nth-last-child(1) {
     border-bottom: none; }
 
 .wrapper {
   padding: 0; }
 
 .navbar {
-  min-height: 500px; }
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
+  text-align: center;
+  flex-direction: column; }
+  .navbar a.navbar-brand {
+    font-family: Bourbon-Rough;
+    font-size: 30px;
+    color: #FFFFFF;
+    letter-spacing: 2.78px;
+    padding: 60px 0 0; }
+  .navbar .page-title {
+    font-family: Bourbon-Rough;
+    font-size: 202px;
+    letter-spacing: 0.21px;
+    color: #fff;
+    width: 100%;
+    display: inline-block;
+    padding: 20px 0 60px 0; }
+  .navbar .navbar-nav {
+    padding: 0 0 60px 0; }
+    .navbar .navbar-nav li {
+      margin: 0 15px; }
+    .navbar .navbar-nav .nav-link {
+      font-family: VentiCF-Black;
+      font-size: 16px;
+      color: #FFFFFF;
+      text-transform: uppercase; }
+    .navbar .navbar-nav .active {
+      border-bottom: solid 2px #fff; }
 
 /* Beers CPT Archive (.post-type-archive-beer)*/
 .page-template-beers h2 {
