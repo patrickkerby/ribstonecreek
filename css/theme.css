@@ -9161,8 +9161,9 @@ p, ul, ul li, a, div {
     letter-spacing: 2.78px;
     padding: 60px 0 0; }
   .navbar .page-title {
-    font-family: Bourbon-Rough;
+    font-family: 'Bourbon-Rough';
     font-size: 202px;
+    text-align: center;
     letter-spacing: 0.21px;
     color: #fff;
     width: 100%;
@@ -9228,6 +9229,32 @@ p, ul, ul li, a, div {
     content: "/"; }
   .beer-meta span:nth-last-child(1):after {
     content: ""; }
+
+/* Home Page Sections */
+.home section div {
+  padding: 200px 0;
+  text-align: center;
+  background-position: cover;
+  background-repeat: no-repeat; }
+  .home section div h2 {
+    font-family: 'Bourbon-Rough';
+    font-size: 202px;
+    text-align: center;
+    letter-spacing: 0.21px;
+    color: #fff;
+    width: 100%;
+    font-size: 175px; }
+  .home section div h3 {
+    background: #fff;
+    color: #000;
+    font-family: VentiCF-Bold;
+    font-size: 21px;
+    transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    padding: 12px 20px;
+    margin: 50px auto; }
 
 .paraxify {
   background-attachment: fixed;
