@@ -27,6 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php
 $hero = get_field('background_image');
 $overlay = get_field('overlay');	
+$logo = get_field('logo');
 ?>
 <div class="hfeed site" id="page">
 
@@ -36,7 +37,7 @@ $overlay = get_field('overlay');
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
 		'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md row no-gutter navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay; ?>), rgba(45,51,55,0.<?php echo $overlay; ?>)), url('<?php echo $hero; ?>');">
+		<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay; ?>), rgba(45,51,55,0.<?php echo $overlay; ?>)), url('<?php echo $hero; ?>');">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container">
@@ -46,23 +47,17 @@ $overlay = get_field('overlay');
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-					<!-- Your site title as branding in the menu -->
-					<?php if ( ! has_custom_logo() ) { ?>
+				<?php if (!empty($logo)) { ?>
+			
+				   <img src="<?php echo( $logo ); ?>" />
 
-						<?php if ( is_front_page() && is_home() ) : ?>
-
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>							
-						<?php else : ?>
-
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-							<h1 class="page-title"><?php the_title() ?></h1>
-				          
-						<?php endif; ?>
-						
-					
-					<?php } else {
-						the_custom_logo();
-					} ?><!-- end custom logo -->
+			    <?php }
+				    else { ?>
+				    
+						<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+						<h1 class="page-title"><?php the_title() ?></h1>    
+		        			    
+				<?php } ?>
 					
 				<div class='modal fade modal-fullscreen-menu' id='modalNavigation' role='dialog' tabindex='-1'>
 					

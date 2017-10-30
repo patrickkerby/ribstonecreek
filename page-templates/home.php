@@ -29,8 +29,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			
 					?>
 					
-						<section class="row">
-							<div class="col-md-12" style="background-image: url('<?php echo $image; ?>');">
+						<section class="row justify-content-md-center paraxify" style="background-image: url('<?php echo $image; ?>');">
+							<div class="col-md-10">
 							    <h2><?php echo( $title ); ?></h2>
 							    <h3><?php echo( $description ); ?></h3>
 							</div>
@@ -43,6 +43,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 	</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
+<script>
+		
+	var myParaxify = paraxify('.paraxify', {
+		speed: 0.6,
+		boost: 0.9
+	});
 
+
+</script>
 <?php get_footer(); ?>
-

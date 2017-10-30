@@ -11,7 +11,7 @@ get_header();
 ?>
 
 <?php
-$container   = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="wrapper" id="archive-wrapper">
