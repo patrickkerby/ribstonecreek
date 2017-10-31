@@ -107,3 +107,37 @@ if ( ! function_exists( 'understrap_post_nav' ) ) :
 		<?php
 	}
 endif;
+
+// Redirect Beer Single Pages to Beer Archive
+
+add_action( 'template_redirect', 'rsc_redirect_post' );
+
+function rsc_redirect_post() {
+  $queried_post_type = get_query_var('post_type');
+  if ( is_single() && 'beer' ==  $queried_post_type ) {
+    wp_redirect( home_url( 'beer', 'relative' ), 301 );
+    exit;
+  }
+}
+
+
+// Add ACF Options Page
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
+
+register_nav_menus( array(
+	'mobile_menu' => 'Mobile Menu',
+	'footer_menu' => 'Footer Menu',
+) );
+
+
+// Make SVGs Work
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+

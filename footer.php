@@ -9,34 +9,45 @@
 
 $the_theme = wp_get_theme();
 $container = get_theme_mod( 'understrap_container_type' );
+$background = get_field('background_image', 'option');
+$overlay = get_field('overlay', 'option');
+
+$address_title = get_field( 'address_title', 'option' );
+$address = get_field( 'address', 'option' );
+
+$hours_title = get_field( 'hours_title', 'option' );
+$hours = get_field( 'hours', 'option' );
+
+$footer_logo = get_field( 'footer_logo', 'option' );
+
+
 ?>
 
 <?php get_sidebar( 'footerfull' ); ?>
 
-<div class="wrapper" id="wrapper-footer">
+<div class="wrapper" id="wrapper-footer" style="background-image: linear-gradient(rgba(68,68,68,0.<?php echo $overlay; ?>), rgba(68,68,68,0.<?php echo $overlay; ?>)), url('<?php echo $background; ?>');">
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 
-		<div class="row">
+		<div class="row justify-content-md-center">
 
-			<div class="col-md-12">
+			<div class="col-md-10">
 
-				<footer class="site-footer" id="colophon">
+				<footer class="site-footer row" id="colophon">
 
-					<div class="site-info">
+					<div class="site-info col-md-4">					
+						<h4><?php echo $address_title; ?></h4>
+						<address><?php echo $address; ?></address>
+						<h4><?php echo $hours_title; ?></h4>
+						<p><?php echo $hours; ?></p>							
+					</div><!-- .site-info -->
 
-							<a href="<?php  echo esc_url( __( 'http://wordpress.org/','understrap' ) ); ?>"><?php printf( 
-							/* translators:*/
-							esc_html__( 'Proudly powered by %s', 'understrap' ),'WordPress' ); ?></a>
-								<span class="sep"> | </span>
-					
-							<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ),  '<a href="'.esc_url( __('http://understrap.com', 'understrap')).'">understrap.com</a>' ); ?> 
-				
-							(<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Version: %1$s', 'understrap' ), $the_theme->get( 'Version' ) ); ?>)
+					<div class="site-info col-md-4">					
+						<img src="<?php echo $footer_logo; ?>" alt="Ribstone Creek Brewery" />
+					</div><!-- .site-info -->
+
+					<div class="site-info col-md-4">					
+						<p>Contact form and email address to go here</p>
 					</div><!-- .site-info -->
 
 				</footer><!-- #colophon -->
