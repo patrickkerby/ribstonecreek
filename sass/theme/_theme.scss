@@ -47,7 +47,7 @@ iframe {
 		margin: 100px;
 	}
 	a.navbar-brand {		
-		font-family: Bourbon-Rough;
+		font-family: $headings;
 		font-size: 30px;
 		color: #FFFFFF;
 		letter-spacing: 2.78px;
@@ -94,7 +94,7 @@ iframe {
 
 .page-template-beers {
  	h2 {
-		font-family: Bourbon-Rough;
+		font-family: $headings;
 		font-size: 60px;
 		color: #3B3B3B;
 		letter-spacing: 0;
