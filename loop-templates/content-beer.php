@@ -12,16 +12,17 @@ $beer_colour = get_field("beer_colour");
 
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>" class="container">
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>" class="row no-gutters">
 
-	<header class="entry-header jumbotron-fluid wow fadeIn" data-wow-duration="1s" style="background-image: url('<?php echo $artwork; ?>');"></header>
+	<header class="entry-header wow fadeIn col-lg-12" data-wow-duration="1s" style="background-image: url('<?php echo $artwork; ?>');"></header>
 
-	<div class="entry-content row">
-		<div class="can col-md-4 col-sm-8 offset-sm-4">
+	<div class="entry-content row no-gutters">
+
+		<div class="can col-md-4 col-sm-8">
 			<img src="<?php echo $can; ?>" class="wow fadeIn" data-wow-duration="2s" />
 		</div>
 
-		<div class="details col-md-6 col-sm-10 offset-lg-1 offset-sm-2 wow fadeIn" data-wow-duration="2.75s">
+		<div class="details col-md-6 col-sm-10 wow fadeIn" data-wow-duration="2.75s">
 			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 		
 			<div class="beer-meta" style="color: <?php echo $beer_colour; ?>;">
@@ -43,13 +44,11 @@ $beer_colour = get_field("beer_colour");
 			</ul>
 			<?php endif; ?>
 
+		<?php understrap_entry_footer(); ?>
+
 		</div> <!-- .details -->
 		
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php understrap_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</div><!-- .entry-content .row -->
 
 </article><!-- #post-## -->
 
