@@ -9273,6 +9273,13 @@ iframe {
     line-height: 36px;
     padding: 0 5px; }
 
+@media (max-width: 575px) {
+  .page-template-beers .can {
+    margin-top: -200px;
+    margin-left: -14%; }
+  .page-template-beers article.beer header {
+    padding: 200px 0; } }
+
 .beer-meta {
   font-size: 22px;
   color: #666;
