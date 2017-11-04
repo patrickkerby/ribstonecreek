@@ -43,8 +43,8 @@ $beer_colour = get_field("beer_colour");
 				<?php endwhile; ?>
 			</ul>
 			<?php endif; ?>
-
-		<?php understrap_entry_footer(); ?>
+			
+			<?php understrap_entry_footer(); ?>
 
 		</div> <!-- .details -->
 		

@@ -44,12 +44,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- Wrapper end -->
 <script>
-		
-	var myParaxify = paraxify('.paraxify', {
+
+if(!Modernizr.touch){
+  	var myParaxify = paraxify('.paraxify', {
 		speed: 0.6,
 		boost: 0.9
 	});
-
+}
 
 </script>
 <?php get_footer(); ?>

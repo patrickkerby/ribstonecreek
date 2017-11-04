@@ -79,6 +79,12 @@ iframe {
 			}
 			color: #FFFFFF;
 			text-transform: uppercase;
+			border-bottom: solid 2px rgba(255, 255, 255, 0);	
+			transition: all 0.5s ease;
+			
+			&:hover {
+				border-bottom: solid 2px rgba(255, 255, 255, 0.15);	
+			}
 		}
 		.active {
 			border-bottom: solid 2px #fff;
@@ -253,11 +259,16 @@ iframe {
 	.site-info {
 		padding-top: 3rem;
 		padding-bottom: 3rem;
+		
+		@include media-breakpoint-down(sm) {
+			text-align: center;
+		}
 	}
 }
 
 /* Forms, Misc and all that jazz */
 
+/* Forms */
 .gform_wrapper {
 	background: #f6f6f6;
 	padding: 3rem;
@@ -283,3 +294,24 @@ body {
 	opacity: 0;
 }
 
+/* Edit Links */
+.edit-link {			
+	a.post-edit-link {
+		display: inline-block;
+		margin: 2rem 0 0 0;
+		padding: 8px 24px;
+		background: #cecece;
+		color: #ffffff;
+		font: {
+			family: Venti;
+			size: 16px;
+			weight: 800;
+		}
+		transition: all 0.5s ease;
+		
+		&:hover {
+			text-decoration: none;
+			background: #bebebe;
+		}
+	}
+}
