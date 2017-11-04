@@ -25,38 +25,30 @@ $footer_logo = get_field( 'footer_logo', 'option' );
 
 <?php get_sidebar( 'footerfull' ); ?>
 
-<div class="wrapper" id="wrapper-footer" style="background-image: linear-gradient(rgba(68,68,68,0.<?php echo $overlay; ?>), rgba(68,68,68,0.<?php echo $overlay; ?>)), url('<?php echo $background; ?>');">
+<div class="wrapper row no-gutters justify-content-sm-center" id="wrapper-footer" style="background-image: linear-gradient(rgba(68,68,68,0.<?php echo $overlay; ?>), rgba(68,68,68,0.<?php echo $overlay; ?>)), url('<?php echo $background; ?>');">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+		<div class="col-xs-11">
 
-		<div class="row justify-content-md-center">
+			<footer class="site-footer row" id="colophon">
 
-			<div class="col-md-10">
+				<div class="site-info col-sm-4 col-xs-10">					
+					<h4><?php echo $address_title; ?></h4>
+					<address><?php echo $address; ?></address>
+					<h4><?php echo $hours_title; ?></h4>
+					<p><?php echo $hours; ?></p>							
+				</div><!-- .site-info -->
 
-				<footer class="site-footer row" id="colophon">
+				<div class="site-info col-sm-4 col-xs-10">					
+					<img src="<?php echo $footer_logo; ?>" alt="Ribstone Creek Brewery" />
+				</div><!-- .site-info -->
 
-					<div class="site-info col-md-4">					
-						<h4><?php echo $address_title; ?></h4>
-						<address><?php echo $address; ?></address>
-						<h4><?php echo $hours_title; ?></h4>
-						<p><?php echo $hours; ?></p>							
-					</div><!-- .site-info -->
+				<div class="site-info col-sm-4 col-xs-10">					
+					<p>Contact form and email address to go here</p>
+				</div><!-- .site-info -->
 
-					<div class="site-info col-md-4">					
-						<img src="<?php echo $footer_logo; ?>" alt="Ribstone Creek Brewery" />
-					</div><!-- .site-info -->
+			</footer><!-- #colophon -->
 
-					<div class="site-info col-md-4">					
-						<p>Contact form and email address to go here</p>
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
-
-			</div><!--col end -->
-
-		</div><!-- row end -->
-
-	</div><!-- container end -->
+		</div><!--col end -->
 
 </div><!-- wrapper end -->
 

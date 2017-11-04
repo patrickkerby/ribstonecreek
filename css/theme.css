@@ -9229,6 +9229,15 @@ iframe {
     .navbar .navbar-nav .active {
       border-bottom: solid 2px #fff; }
 
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.75)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
+
+.navbar-dark .navbar-toggler {
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0.5rem; }
+
 /* Default Page Teplate */
 .page-template-fullwidthpage #content {
   padding: 6rem 0; }
@@ -9331,7 +9340,26 @@ iframe {
     width: auto;
     margin: 50px auto; }
 
-/* Forms */
+/* Footer Style */
+#wrapper-footer {
+  background-size: cover;
+  -webkit-box-shadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3); }
+  #wrapper-footer h4, #wrapper-footer h5, #wrapper-footer p, #wrapper-footer address {
+    font-family: Venti;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px; }
+  #wrapper-footer h3, #wrapper-footer h4, #wrapper-footer h5, #wrapper-footer h6 {
+    color: #818181; }
+  #wrapper-footer p, #wrapper-footer address {
+    color: #fff; }
+  #wrapper-footer .site-info {
+    padding-top: 3rem;
+    padding-bottom: 3rem; }
+
+/* Forms, Misc and all that jazz */
 .gform_wrapper {
   background: #f6f6f6;
   padding: 3rem;
@@ -9353,23 +9381,6 @@ body {
 
 .wf-loading body {
   opacity: 0; }
-
-/* Footer Style */
-#wrapper-footer {
-  background-size: cover;
-  -webkit-box-shadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3); }
-  #wrapper-footer h4, #wrapper-footer h5, #wrapper-footer p, #wrapper-footer address {
-    font-size: 16px;
-    font-family: VentiCF-DemiBold;
-    line-height: 21px; }
-  #wrapper-footer h3, #wrapper-footer h4, #wrapper-footer h5, #wrapper-footer h6 {
-    color: #818181; }
-  #wrapper-footer p, #wrapper-footer address {
-    color: #fff; }
-  #wrapper-footer .site-info {
-    padding: 3rem; }
 
 /*
 * Use existing Bootstrap 4 classes and
