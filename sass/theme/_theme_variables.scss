@@ -18,7 +18,7 @@
 	width: 100%;
 }
 
-//The following sets variable font sizes for headers.
+//The following sets variable font sizes for home page section.
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
 }
@@ -46,5 +46,33 @@ $min_width: 320px;
 $max_width: 1400px;
 $min_font: 80px;
 $max_font: 180px;
+
+
+//The following sets variable font sizes for header sections
+@mixin fluid-head($min-vw2, $max-vw2, $min-head-size, $max-head-size) {
+  $u1: unit($min-vw2);
+  $u2: unit($max-vw2);
+  $u3: unit($min-head-size);
+  $u4: unit($max-head-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      height: $min-head-size;
+      @media screen and (min-width: $min-vw) {
+        height: calc(#{$min-head-size} + #{strip-unit($max-head-size - $min-head-size)} * ((100vw - #{$min-vw2}) / #{strip-unit($max-vw2 - $min-vw2)}));
+      }
+      @media screen and (min-width: $max-vw2) {
+        height: $max-head-size;
+      }
+    }
+  }
+}
+
+$min_width: 320px;
+$max_width: 1400px;
+$min_head: 40vh;
+$max_head: 70vh;
+
+
 
 $brand-primary: #7852B2; //#ff6d5a

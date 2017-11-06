@@ -16,9 +16,9 @@ $beer_colour = get_field("beer_colour");
 
 	<header class="entry-header wow fadeIn col-lg-12" data-wow-duration="1s" style="background-image: url('<?php echo $artwork; ?>');"></header>
 
-	<div class="entry-content row no-gutters">
+	<div class="entry-content row justify-content-center no-gutters">
 
-		<div class="can col-md-4 col-sm-8">
+		<div class="can col-md-3 col-sm-6 col-xs-8">
 			<img src="<?php echo $can; ?>" class="wow fadeIn" data-wow-duration="2s" />
 		</div>
 

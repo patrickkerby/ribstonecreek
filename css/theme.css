@@ -9187,9 +9187,13 @@ iframe {
 
 .navbar {
   background-size: cover;
-  background-position: center bottom;
+  background-position: center center;
   text-align: center;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: center; }
+  @media (min-width: 576px) {
+    .navbar {
+      background-attachment: fixed; } }
   .navbar img {
     margin: 100px; }
   .navbar a.navbar-brand {
@@ -9197,7 +9201,9 @@ iframe {
     font-size: 30px;
     color: #FFFFFF;
     letter-spacing: 2.78px;
-    padding: 60px 0 0; }
+    padding: 60px 0 0;
+    white-space: normal;
+    margin: 0; }
   .navbar .page-title {
     font-family: bourbon, serif;
     font-size: 202px;
@@ -9256,9 +9262,13 @@ iframe {
   color: #3B3B3B;
   letter-spacing: 0;
   line-height: 74px; }
-
-.page-template-beers .can {
-  margin-top: -100px; }
+  @media (max-width: 767px) {
+    .page-template-beers h2 {
+      font-size: 65px;
+      line-height: 64px;
+      margin: 0;
+      padding-bottom: 10px;
+      text-align: center; } }
 
 .page-template-beers article.beer {
   padding-bottom: 100px; }
@@ -9268,9 +9278,26 @@ iframe {
     background-position: center bottom;
     padding: 300px 0;
     box-shadow: inset 0 14px 19px 0 rgba(0, 0, 0, 0.14); }
+    @media (max-width: 575px) {
+      .page-template-beers article.beer header {
+        padding: 200px 0; } }
+
+.page-template-beers .can {
+  margin-top: -100px;
+  filter: drop-shadow(-53px 17px 57px rgba(0, 0, 0, 0.85)); }
+  @media (max-width: 767px) {
+    .page-template-beers .can {
+      margin-top: -300px; } }
+  @media (max-width: 575px) {
+    .page-template-beers .can {
+      margin-top: -300px;
+      padding: 30px; } }
 
 .page-template-beers .details {
-  margin: 30px 0 0 20px; }
+  padding: 15px 0 0 50px; }
+  @media (max-width: 767px) {
+    .page-template-beers .details {
+      padding: 0 15px 0 15px; } }
 
 .page-template-beers article ul {
   list-style-type: none;
@@ -9286,25 +9313,38 @@ iframe {
     line-height: 36px;
     padding: 0 5px; }
 
-@media (max-width: 575px) {
-  .page-template-beers .can {
-    margin-top: -200px;
-    margin-left: -14%; }
-  .page-template-beers article.beer header {
-    padding: 200px 0; } }
-
 .beer-meta {
   font-size: 22px;
   color: #666;
   letter-spacing: 0;
   margin: 1rem 0;
   font-weight: 700; }
+  @media (max-width: 767px) {
+    .beer-meta {
+      font-size: 19px;
+      margin: 1rem 0 1.5rem 0;
+      padding: 0.5rem 0;
+      border: solid 2px;
+      border-width: 2px 0;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      /* works with row or column */
+      flex-direction: column;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center; } }
   .beer-meta span:after {
     opacity: 0.2;
     margin: 0 1rem;
     content: "/"; }
+    @media (max-width: 767px) {
+      .beer-meta span:after {
+        content: none;
+        margin: 0; } }
   .beer-meta span:nth-last-child(1):after {
-    content: ""; }
+    content: none; }
 
 /* Home Page Sections */
 .home section {
@@ -9347,6 +9387,7 @@ iframe {
 /* Footer Style */
 #wrapper-footer {
   background-size: cover;
+  background-position: center center;
   -webkit-box-shadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3); }
