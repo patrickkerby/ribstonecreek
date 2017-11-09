@@ -47,7 +47,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
   	var myParaxify = paraxify('.paraxify', {
 		speed: 0.6,
-		boost: 0.9
+		boost: 0.1
 	});
 
 </script>
