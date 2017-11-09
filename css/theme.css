@@ -9452,8 +9452,7 @@ iframe {
 /* Parallax */
 .paraxify {
   background-attachment: fixed;
-  background-position: center center;
-  background-size: cover; }
+  background-position: center center; }
 
 .wow {
   visibility: hidden; }
