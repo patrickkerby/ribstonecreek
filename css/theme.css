@@ -9377,7 +9377,9 @@ iframe {
 
 /* Home Page Sections */
 .home section {
-  padding: 110px 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
   text-align: center;
   background-position: cover;
   background-repeat: no-repeat;
@@ -9412,6 +9414,10 @@ iframe {
     display: inline-block;
     width: auto;
     margin: 50px auto; }
+    @media (max-width: 767px) {
+      .home section h3 {
+        margin: 0 auto;
+        font-size: 16px; } }
 
 /* Footer Style */
 #wrapper-footer {
