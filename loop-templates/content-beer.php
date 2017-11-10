@@ -9,7 +9,6 @@
 $artwork = get_field("artwork");
 $can = get_field("beer_can");
 $beer_colour = get_field("beer_colour");
-
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>" class="row no-gutters">
