@@ -9455,6 +9455,10 @@ iframe {
   background-position: center center;
   background-size: cover; }
 
+@media (max-width: 575px) {
+  .paraxify {
+    background-size: 900px,contain; } }
+
 .wow {
   visibility: hidden; }
 

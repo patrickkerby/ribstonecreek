@@ -383,6 +383,12 @@ iframe {
 	background-position: center center;
 	background-size: cover;
 }
+@include media-breakpoint-down(xs) {
+	.paraxify,
+	%paraxify {
+		background-size: 900px,contain;
+	}	
+}
 .wow { visibility: hidden; }
 
 //Webfont Loading
