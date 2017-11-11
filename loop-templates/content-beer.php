@@ -18,7 +18,7 @@ $beer_colour = get_field("beer_colour");
 	<div class="entry-content row justify-content-center no-gutters">
 
 		<div class="can col-md-3 col-sm-4 col-10">
-			<img src="<?php echo $can; ?>" class="wow fadeIn" data-wow-duration="2s" />
+			<img src="<?php echo $can; ?>" class="wow fadeIn" data-wow-duration="1.4s" />
 		</div>
 
 		<div class="details col-md-6 col-sm-6 wow fadeIn" data-wow-duration="2.75s">

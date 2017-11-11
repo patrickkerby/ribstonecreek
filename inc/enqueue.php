@@ -22,7 +22,9 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		}
 		wp_enqueue_script( 'paraxify', get_template_directory_uri() . '/js/paraxify.min.js', array(), false);
 		wp_enqueue_script( 'wow', get_template_directory_uri() . '/js/wow.min.js', array(), false);
-
+		wp_enqueue_script( 'classie', get_template_directory_uri() . '/js/classie.js', array(), false);
+		wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.custom.js', array(), false);
+		wp_enqueue_script( 'chrome-vh', get_template_directory_uri() . '/js/chrome-vh-fix.js', array(), false);
 	}
 } // endif function_exists( 'understrap_scripts' ).
 

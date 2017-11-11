@@ -29,10 +29,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			
 					?>
 					
-						<section class="row justify-content-md-center paraxify" style="background-image: url('<?php echo $image; ?>');">
+						<section class="row site-section justify-content-md-center paraxify" style="background-image: url('<?php echo $image; ?>');">
 							<div class="col-md-10">
 							    <h2><?php echo( $title ); ?></h2>
 							    <h3><?php echo( $description ); ?></h3>
+							    <a class="cta" href="">Check out our beers!</a>
 							</div>
 						</section>
 			
@@ -46,9 +47,18 @@ $container   = get_theme_mod( 'understrap_container_type' );
 <script>
 
   	var myParaxify = paraxify('.paraxify', {
-		speed: 1,
+		speed: 0.8,
 		boost: 0.7
 	});
+	
+	
+    var vhFix = new VHChromeFix([
+      {
+        selector: '.site-section',
+        vh: 100
+      }
+    ]);
+  
 
 </script>
 <?php get_footer(); ?>

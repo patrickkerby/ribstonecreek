@@ -48,7 +48,7 @@ $min_font: 80px;
 $max_font: 180px;
 
 
-//The following sets variable font sizes for header sections
+//The following sets variable font sizes for header sections. It's not working yet.
 @mixin fluid-head($min-vw2, $max-vw2, $min-head-size, $max-head-size) {
   $u1: unit($min-vw2);
   $u2: unit($max-vw2);

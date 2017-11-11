@@ -9186,6 +9186,7 @@ iframe {
   padding: 3rem 0; }
 
 .navbar {
+  max-height: 90vh;
   background-size: cover;
   background-position: center center;
   text-align: center;
@@ -9193,7 +9194,8 @@ iframe {
   justify-content: center; }
   @media (min-width: 576px) {
     .navbar {
-      background-attachment: fixed; } }
+      background-attachment: fixed;
+      max-height: 90vh; } }
   .navbar img {
     margin: 100px; }
   .navbar a.navbar-brand {
@@ -9319,7 +9321,8 @@ iframe {
       margin-top: -200px;
       padding: 30px; } }
   .page-template-beers .can img {
-    filter: drop-shadow(-53px 17px 57px rgba(0, 0, 0, 0.85)); }
+    filter: drop-shadow(-53px 17px 57px rgba(0, 0, 0, 0.65));
+    -webkit-transform: translateZ(0); }
 
 .page-template-beers .details {
   padding: 15px 0 0 50px; }
@@ -9381,8 +9384,20 @@ iframe {
   display: flex;
   align-items: center;
   text-align: center;
+  position: relative;
   background-position: cover;
   background-repeat: no-repeat;
+  /*
+			&:before {
+				content: "";
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-image: linear-gradient(rgba(45,51,55,0.3), rgba(45,51,55,0.4));
+			}
+*/
   -webkit-box-shadow: inset 0 80px 80px -80px rgba(0, 0, 0, 0.99);
   -moz-box-shadow: inset 0 80px 80px -80px rgba(0, 0, 0, 0.99);
   box-shadow: inset 0 80px 80px -80px rgba(0, 0, 0, 0.99); }
@@ -9405,7 +9420,7 @@ iframe {
   .home section h3 {
     background: #fff;
     color: #000;
-    padding: 12px 20px;
+    padding: 0.75rem 2rem;
     font-weight: 800;
     font-size: 18px;
     text-transform: uppercase;
@@ -9413,11 +9428,25 @@ iframe {
     letter-spacing: 0.09em;
     display: inline-block;
     width: auto;
-    margin: 50px auto; }
+    margin: 0 auto 2rem auto;
+    border: solid 3px #fff; }
     @media (max-width: 767px) {
       .home section h3 {
-        margin: 0 auto;
         font-size: 16px; } }
+  .home section a:link, .home section a:visited {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    color: #fff;
+    padding: 0.34rem 2rem;
+    border: solid 3px #fff;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s; }
+  .home section a:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #333; }
 
 /* Footer Style */
 #wrapper-footer {
@@ -9457,7 +9486,7 @@ iframe {
 
 @media (max-width: 575px) {
   .paraxify {
-    background-size: 900px,contain; } }
+    background-attachment: scroll; } }
 
 .wow {
   visibility: hidden; }
