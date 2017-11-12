@@ -9,6 +9,14 @@ h2 {
 	padding-bottom: 1rem;
 	text-transform: uppercase;
 }
+h3 {
+	font: {
+		size: 1.55rem;
+		weight: 900;
+	}
+	text-transform: uppercase;
+	line-height: 2rem;
+}
 
 p, ul, ul li, a, div {
 	font: {
@@ -55,13 +63,15 @@ iframe {
 
 	img {
 		max-width: 40%;
+		@include media-breakpoint-down(sm) {
+			max-width: 80%;
+		}	
 	}
 	a.navbar-brand {		
 		font-family: $headings;
 		font-size: 30px;
 		color: #FFFFFF;
 		letter-spacing: 2.78px;
-		padding: 60px 0 0;
 		white-space: normal;
 		margin: 0;
 	}
@@ -71,12 +81,9 @@ iframe {
 	.page-title {
 		@include giantheader;
 		@include fluid-type($min_width, $max_width, $min_font, $max_font);
-
 		display: inline-block;
-		padding: 20px 0 60px 0;
 	}
 	.navbar-nav {
-		padding: 3rem 0;
 		
 		li {
 			margin: 0 15px;
@@ -153,12 +160,30 @@ iframe {
 
 /* Default Page Teplate */
 
-.page-template-fullwidthpage #content {
+.page-template-fullwidthpage .content-area {
 	padding: 6rem 0;
 	
-	p {
-		padding: 0 0 1rem 0;
+	h2, h3, h4, ul, .tiled-gallery {
+		margin: 0 0 2.5rem 0;
 	}
+	
+	p {
+		margin: 0 0 1.5rem 0;
+	}
+	
+	ul {
+		li {
+			border: none;
+		}
+	}
+	hr {
+		width: 45%;
+	    margin-top: 3rem;
+	    margin-bottom: 3rem;
+	    border: 0;
+	    border-top: 4px solid rgba(0,0,0,.05);
+	}
+
 }
 
 

@@ -9164,6 +9164,12 @@ h2 {
   padding-bottom: 1rem;
   text-transform: uppercase; }
 
+h3 {
+  font-size: 1.55rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 2rem; }
+
 p, ul, ul li, a, div {
   font-family: Venti;
   font-size: 21px;
@@ -9199,12 +9205,14 @@ iframe {
       background-attachment: fixed; } }
   .navbar img {
     max-width: 40%; }
+    @media (max-width: 767px) {
+      .navbar img {
+        max-width: 80%; } }
   .navbar a.navbar-brand {
     font-family: bourbon, serif;
     font-size: 30px;
     color: #FFFFFF;
     letter-spacing: 2.78px;
-    padding: 60px 0 0;
     white-space: normal;
     margin: 0; }
   .navbar .collapse {
@@ -9217,32 +9225,29 @@ iframe {
     letter-spacing: 0.21px;
     color: #fff;
     width: 100%;
-    display: inline-block;
-    padding: 20px 0 60px 0; }
+    display: inline-block; }
     .navbar .page-title {
       font-size: 80px; }
       @media screen and (min-width: 320px) {
         .navbar .page-title {
-          font-size: calc(80px + 100 * ((100vw - 320px) / 1080)); } }
+          font-size: calc(80px + 120 * ((100vw - 320px) / 1080)); } }
       @media screen and (min-width: 1400px) {
         .navbar .page-title {
-          font-size: 180px; } }
-  .navbar .navbar-nav {
-    padding: 3rem 0; }
-    .navbar .navbar-nav li {
-      margin: 0 15px; }
-    .navbar .navbar-nav .nav-link {
-      font-family: Venti;
-      font-weight: 900;
-      font-size: 16px;
-      color: #FFFFFF;
-      text-transform: uppercase;
-      border-bottom: solid 2px rgba(255, 255, 255, 0);
-      transition: all 0.5s ease; }
-      .navbar .navbar-nav .nav-link:hover {
-        border-bottom: solid 2px rgba(255, 255, 255, 0.15); }
-    .navbar .navbar-nav .active {
-      border-bottom: solid 2px #fff; }
+          font-size: 200px; } }
+  .navbar .navbar-nav li {
+    margin: 0 15px; }
+  .navbar .navbar-nav .nav-link {
+    font-family: Venti;
+    font-weight: 900;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    border-bottom: solid 2px rgba(255, 255, 255, 0);
+    transition: all 0.5s ease; }
+    .navbar .navbar-nav .nav-link:hover {
+      border-bottom: solid 2px rgba(255, 255, 255, 0.15); }
+  .navbar .navbar-nav .active {
+    border-bottom: solid 2px #fff; }
   .navbar .modal-fullscreen-menu {
     background: rgba(0, 0, 0, 0.76); }
   .navbar .modal-dialog {
@@ -9281,10 +9286,20 @@ iframe {
   z-index: 999; }
 
 /* Default Page Teplate */
-.page-template-fullwidthpage #content {
+.page-template-fullwidthpage .content-area {
   padding: 6rem 0; }
-  .page-template-fullwidthpage #content p {
-    padding: 0 0 1rem 0; }
+  .page-template-fullwidthpage .content-area h2, .page-template-fullwidthpage .content-area h3, .page-template-fullwidthpage .content-area h4, .page-template-fullwidthpage .content-area ul, .page-template-fullwidthpage .content-area .tiled-gallery {
+    margin: 0 0 2.5rem 0; }
+  .page-template-fullwidthpage .content-area p {
+    margin: 0 0 1.5rem 0; }
+  .page-template-fullwidthpage .content-area ul li {
+    border: none; }
+  .page-template-fullwidthpage .content-area hr {
+    width: 45%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: 0;
+    border-top: 4px solid rgba(0, 0, 0, 0.05); }
 
 /* Beers CPT Archive (.post-type-archive-beer)*/
 .page-template-beers h2 {
@@ -9413,10 +9428,10 @@ iframe {
       font-size: 80px; }
       @media screen and (min-width: 320px) {
         .home section h2 {
-          font-size: calc(80px + 100 * ((100vw - 320px) / 1080)); } }
+          font-size: calc(80px + 120 * ((100vw - 320px) / 1080)); } }
       @media screen and (min-width: 1400px) {
         .home section h2 {
-          font-size: 180px; } }
+          font-size: 200px; } }
   .home section h3 {
     background: #fff;
     color: #000;

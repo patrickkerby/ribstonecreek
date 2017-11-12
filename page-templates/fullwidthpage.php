@@ -13,13 +13,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="full-width-page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+		<div class="row no-gutters justify-content-center">
 
-		<div class="row justify-content-md-center">
-
-			<div class="col-md-8 content-area" id="primary">
-
-				<main class="site-main" id="main" role="main">
+			<div class="col-8 col-xs-11 content-area" id="primary">
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
@@ -36,13 +32,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php endwhile; // end of the loop. ?>
 
-				</main><!-- #main -->
-
 			</div><!-- #primary -->
 
 		</div><!-- .row end -->
-
-	</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 
