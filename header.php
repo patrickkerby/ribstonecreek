@@ -53,13 +53,9 @@ $logo = get_field('logo');
 			<div class="container">
 		<?php endif; ?>
 
-				<button class="navbar-toggler pull-right" type="button" data-toggle="modal" data-target="#modalNavigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
 				<?php if (!empty($logo)) { ?>
 			
-				   <img src="<?php echo( $logo ); ?>" />
+				<img src="<?php echo( $logo ); ?>" />
 
 			    <?php }
 				    else { ?>
@@ -69,6 +65,10 @@ $logo = get_field('logo');
 		        			    
 				<?php } ?>
 					
+				<button class="navbar-toggler pull-right" type="button" data-toggle="modal" data-target="#modalNavigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+	
 				<div class='modal fade modal-fullscreen-menu' id='modalNavigation' role='dialog' tabindex='-1'>
 					
 					<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
@@ -92,7 +92,6 @@ $logo = get_field('logo');
 					</div>
 				</div>						
 
-				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',

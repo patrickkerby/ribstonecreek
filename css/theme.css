@@ -9186,18 +9186,19 @@ iframe {
   padding: 3rem 0; }
 
 .navbar {
-  max-height: 90vh;
+  height: 80vh;
   background-size: cover;
   background-position: center center;
+  display: flex;
+  align-items: center;
   text-align: center;
   flex-direction: column;
   justify-content: center; }
   @media (min-width: 576px) {
     .navbar {
-      background-attachment: fixed;
-      max-height: 90vh; } }
+      background-attachment: fixed; } }
   .navbar img {
-    margin: 100px; }
+    max-width: 40%; }
   .navbar a.navbar-brand {
     font-family: bourbon, serif;
     font-size: 30px;
@@ -9206,6 +9207,8 @@ iframe {
     padding: 60px 0 0;
     white-space: normal;
     margin: 0; }
+  .navbar .collapse {
+    flex-basis: auto; }
   .navbar .page-title {
     font-family: bourbon, serif;
     font-size: 202px;
@@ -9225,7 +9228,7 @@ iframe {
         .navbar .page-title {
           font-size: 180px; } }
   .navbar .navbar-nav {
-    padding: 0 0 60px 0; }
+    padding: 3rem 0; }
     .navbar .navbar-nav li {
       margin: 0 15px; }
     .navbar .navbar-nav .nav-link {
@@ -9387,20 +9390,17 @@ iframe {
   position: relative;
   background-position: cover;
   background-repeat: no-repeat;
-  /*
-			&:before {
-				content: "";
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				background-image: linear-gradient(rgba(45,51,55,0.3), rgba(45,51,55,0.4));
-			}
-*/
   -webkit-box-shadow: inset 0 80px 80px -80px rgba(0, 0, 0, 0.99);
   -moz-box-shadow: inset 0 80px 80px -80px rgba(0, 0, 0, 0.99);
   box-shadow: inset 0 80px 80px -80px rgba(0, 0, 0, 0.99); }
+  .home section:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(rgba(45, 51, 55, 0.3), rgba(45, 51, 55, 0.4)); }
   .home section h2 {
     font-family: bourbon, serif;
     font-size: 202px;
@@ -9432,7 +9432,8 @@ iframe {
     border: solid 3px #fff; }
     @media (max-width: 767px) {
       .home section h3 {
-        font-size: 16px; } }
+        font-size: 16px;
+        width: 80%; } }
   .home section a:link, .home section a:visited {
     display: flex;
     width: fit-content;

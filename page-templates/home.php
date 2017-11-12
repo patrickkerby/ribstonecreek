@@ -25,6 +25,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					$title = get_sub_field('title');
 					$description = get_sub_field('description');
 					$link = get_sub_field('link');
+					$link_text = get_sub_field('link_text');
 					$image = get_sub_field('image');
 			
 					?>
@@ -33,7 +34,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 							<div class="col-md-10">
 							    <h2><?php echo( $title ); ?></h2>
 							    <h3><?php echo( $description ); ?></h3>
-							    <a class="cta" href="">Check out our beers!</a>
+							    <a class="cta" href="<?php echo( $link ); ?>"><?php echo( $link_text ); ?></a>
 							</div>
 						</section>
 			

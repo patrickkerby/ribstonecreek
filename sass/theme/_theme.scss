@@ -43,17 +43,18 @@ iframe {
 .navbar {
 	@include media-breakpoint-up(sm) {
 		background-attachment: fixed;
-		max-height: 90vh;
 	}
-	max-height: 90vh;
+	height: 80vh;
 	background-size: cover;
 	background-position: center center;
+	display: flex;
+	align-items: center;			
 	text-align: center;
 	flex-direction: column;
 	justify-content: center; 
 
 	img {
-		margin: 100px;
+		max-width: 40%;
 	}
 	a.navbar-brand {		
 		font-family: $headings;
@@ -64,7 +65,9 @@ iframe {
 		white-space: normal;
 		margin: 0;
 	}
-	
+	.collapse {
+		flex-basis: auto;
+	}
 	.page-title {
 		@include giantheader;
 		@include fluid-type($min_width, $max_width, $min_font, $max_font);
@@ -73,7 +76,7 @@ iframe {
 		padding: 20px 0 60px 0;
 	}
 	.navbar-nav {
-		padding: 0 0 60px 0;
+		padding: 3rem 0;
 		
 		li {
 			margin: 0 15px;
@@ -298,7 +301,6 @@ iframe {
 				position: cover;
 				repeat: no-repeat;
 			}
-/*
 			&:before {
 				content: "";
 				width: 100%;
@@ -308,7 +310,6 @@ iframe {
 				left: 0;
 				background-image: linear-gradient(rgba(45,51,55,0.3), rgba(45,51,55,0.4));
 			}
-*/
 	        -webkit-box-shadow: inset 0 80px 80px -80px rgba(0,0,0,0.99);
 		    -moz-box-shadow: inset 0 80px 80px -80px rgba(0,0,0,0.99);
 		    box-shadow: inset 0 80px 80px -80px rgba(0,0,0,0.99);
@@ -337,6 +338,7 @@ iframe {
 								
 				@include media-breakpoint-down(sm) {
 					font-size: 16px;
+					width: 80%;
 				}
 
 			}
