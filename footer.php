@@ -43,7 +43,7 @@ $footer_logo = get_field( 'footer_logo', 'option' );
 				</div><!-- .site-info -->
 	
 				<div class="site-info col-sm-4 col-xs-10">					
-					<p>Contact form and email address to go here</p>
+					<p>Newsletter sign up goes here</p>
 				</div><!-- .site-info -->
 	
 			</footer><!-- #colophon -->

@@ -15,7 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row no-gutters justify-content-center">
 
-			<div class="col-8 col-xs-11 content-area" id="primary">
+			<div class="col-md-8 col-10 content-area" id="primary">
 
 					<?php while ( have_posts() ) : the_post(); ?>
 

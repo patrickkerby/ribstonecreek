@@ -9216,7 +9216,8 @@ iframe {
     white-space: normal;
     margin: 0; }
   .navbar .collapse {
-    flex-basis: auto; }
+    flex-basis: auto;
+    margin: 2rem 0 0 0; }
   .navbar .page-title {
     font-family: bourbon, serif;
     font-size: 202px;
@@ -9230,10 +9231,10 @@ iframe {
       font-size: 80px; }
       @media screen and (min-width: 320px) {
         .navbar .page-title {
-          font-size: calc(80px + 120 * ((100vw - 320px) / 1080)); } }
+          font-size: calc(80px + 100 * ((100vw - 320px) / 1080)); } }
       @media screen and (min-width: 1400px) {
         .navbar .page-title {
-          font-size: 200px; } }
+          font-size: 180px; } }
   .navbar .navbar-nav li {
     margin: 0 15px; }
   .navbar .navbar-nav .nav-link {
@@ -9428,10 +9429,10 @@ iframe {
       font-size: 80px; }
       @media screen and (min-width: 320px) {
         .home section h2 {
-          font-size: calc(80px + 120 * ((100vw - 320px) / 1080)); } }
+          font-size: calc(80px + 100 * ((100vw - 320px) / 1080)); } }
       @media screen and (min-width: 1400px) {
         .home section h2 {
-          font-size: 200px; } }
+          font-size: 180px; } }
   .home section h3 {
     background: #fff;
     color: #000;
@@ -9443,8 +9444,9 @@ iframe {
     letter-spacing: 0.09em;
     display: inline-block;
     width: auto;
-    margin: 0 auto 2rem auto;
-    border: solid 3px #fff; }
+    margin: 0 auto 2.5rem auto;
+    border: solid 3px #fff;
+    line-height: normal; }
     @media (max-width: 767px) {
       .home section h3 {
         font-size: 16px;
