@@ -345,9 +345,8 @@ iframe {
 				@include fluid-type($min_width, $max_width, $min_font, $max_font);
 			}
 			h3 {
-				background: #fff;
-				color: #000;
 				padding: 0.75rem 2rem;
+				color: #fff;
 				font:{ 
 					weight: 800;
 					size: 18px;
@@ -359,8 +358,7 @@ iframe {
 				letter-spacing: 0.09em;
 				display: inline-block;
 				width: auto;
-				margin: 0 auto 2.5rem auto;
-				border: solid 3px #fff;
+				margin: 0 auto 2rem auto;
 				line-height: normal;
 								
 				@include media-breakpoint-down(sm) {

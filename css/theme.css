@@ -9434,9 +9434,8 @@ iframe {
         .home section h2 {
           font-size: 180px; } }
   .home section h3 {
-    background: #fff;
-    color: #000;
     padding: 0.75rem 2rem;
+    color: #fff;
     font-weight: 800;
     font-size: 18px;
     text-transform: uppercase;
@@ -9444,8 +9443,7 @@ iframe {
     letter-spacing: 0.09em;
     display: inline-block;
     width: auto;
-    margin: 0 auto 2.5rem auto;
-    border: solid 3px #fff;
+    margin: 0 auto 2rem auto;
     line-height: normal; }
     @media (max-width: 767px) {
       .home section h3 {
