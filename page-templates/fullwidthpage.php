@@ -45,6 +45,9 @@ var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/patrickkerby/cj9yt9j2q7yp22sr5eesb4tsl'
 });
+map.scrollZoom.disable();
+map.addControl(new mapboxgl.NavigationControl());
+
 </script>
 
 		<?php } else {
