@@ -18,7 +18,7 @@ h3 {
 	line-height: 2rem;
 }
 
-p, ul, ul li, a, div {
+p, ul, ul li, a, div, label {
 	font: {
 		family: Venti;
 		size: 21px;
@@ -27,6 +27,19 @@ p, ul, ul li, a, div {
 	color: #434343;
 	letter-spacing: 0;
 	line-height: 33px;
+}
+
+label.gfield_label {
+	font: {
+		weight: 800 !important;
+		size: 1.1rem !important;
+	}
+	margin: 0 !important;
+	text-transform: uppercase;
+}
+div span label {
+	font-size: 0.9rem !important;
+	
 }
 
 #content ul {
@@ -473,4 +486,7 @@ body {
 			background: #bebebe;
 		}
 	}
+}
+#map {
+	height: 400px;
 }

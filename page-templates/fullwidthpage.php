@@ -36,6 +36,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</div><!-- .row end -->
 
+		<?php if( is_page( 'contact' ) ) { ?>
+
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoicGF0cmlja2tlcmJ5IiwiYSI6ImpxWDBaVFkifQ.t3gbX7-Sfy3Z9Nh14aLFow';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/patrickkerby/cj9yt9j2q7yp22sr5eesb4tsl'
+});
+</script>
+
+		<?php } else {
+			//no map
+		}?>
+
 </div><!-- Wrapper end -->
 
 <?php get_footer(); ?>

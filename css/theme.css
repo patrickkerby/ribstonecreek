@@ -9170,13 +9170,22 @@ h3 {
   text-transform: uppercase;
   line-height: 2rem; }
 
-p, ul, ul li, a, div {
+p, ul, ul li, a, div, label {
   font-family: Venti;
   font-size: 21px;
   font-weight: 500;
   color: #434343;
   letter-spacing: 0;
   line-height: 33px; }
+
+label.gfield_label {
+  font-weight: 800 !important;
+  font-size: 1.1rem !important;
+  margin: 0 !important;
+  text-transform: uppercase; }
+
+div span label {
+  font-size: 0.9rem !important; }
 
 #content ul li {
   border-bottom: solid 3px #f5f5f5; }
@@ -9529,6 +9538,9 @@ body {
   .edit-link a.post-edit-link:hover {
     text-decoration: none;
     background: #bebebe; }
+
+#map {
+  height: 400px; }
 
 /*
 * Use existing Bootstrap 4 classes and
