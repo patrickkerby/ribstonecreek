@@ -9,6 +9,7 @@
 $artwork = get_field("artwork");
 $can = get_field("beer_can");
 $beer_colour = get_field("beer_colour");
+$container_type = get_field("container");
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>" class="row no-gutters">
@@ -17,7 +18,7 @@ $beer_colour = get_field("beer_colour");
 
 	<div class="entry-content row justify-content-center no-gutters">
 
-		<div class="can col-md-3 col-sm-4 col-10">
+		<div class="can <?php echo $container_type; ?> col-md-3 col-sm-4 col-10">
 			<img src="<?php echo $can; ?>" class="wow fadeIn" data-wow-duration="1.4s" />
 		</div>
 
