@@ -9352,7 +9352,8 @@ iframe {
     filter: drop-shadow(-53px 17px 57px rgba(0, 0, 0, 0.65));
     -webkit-transform: translateZ(0); }
   .page-template-beers .can.bomber {
-    margin-top: -300px; }
+    margin-top: -300px;
+    padding: 15px; }
 
 .page-template-beers .details {
   padding: 15px 0 0 50px; }
