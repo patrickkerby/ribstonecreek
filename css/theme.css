@@ -9561,7 +9561,8 @@ footer .gform_wrapper {
       border: solid 2px #222;
       cursor: pointer; }
   footer .gform_wrapper .gform_footer {
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
 
 /* Parallax */
 .paraxify {
