@@ -18,7 +18,7 @@ h3 {
 	line-height: 2rem;
 } 
 
-p, ul, ul li, a, div, label {
+p, ul, ul li, a, div, label, input[type="submit"] {
 	font: {
 		family: Venti;
 		size: 21px;
@@ -29,10 +29,10 @@ p, ul, ul li, a, div, label {
 	line-height: 33px;
 }
 
-label.gfield_label {
+label.gfield_label, input[type="submit"] {
 	font: {
-		weight: 800 !important;
-		size: 1.1rem !important;
+		weight: 800;
+		size: 1.1rem;
 	}
 	margin: 0 !important;
 	text-transform: uppercase;
@@ -242,8 +242,7 @@ iframe {
 			
 		@include media-breakpoint-down(sm) {
 			margin-top: -150px;
-		}		
-	
+		}
 		@include media-breakpoint-down(xs) {
 			margin-top: -200px;
 			padding: 30px;
@@ -411,7 +410,7 @@ iframe {
     -moz-box-shadow: inset  0 40px 40px -40px rgba(0,0,0,0.3);
     box-shadow: inset  0 40px 40px -40px rgba(0,0,0,0.3);
 	
-	h4, h5, p, address {
+	h4, h5, p, address, label {
 		font: {
 			family: Venti;
 			size: 16px;
@@ -433,6 +432,11 @@ iframe {
 		@include media-breakpoint-down(sm) {
 			text-align: center;
 		}
+		
+		img {
+			display: flex;
+			margin: 0 auto;
+		}
 	}
 }
 
@@ -443,6 +447,75 @@ iframe {
 	background: #f6f6f6;
 	padding: 3rem;
 	margin: -2rem;
+
+	ul {
+		li {
+			list-style-type: none;
+		}
+	}
+}
+footer .gform_wrapper {
+	background: none;
+	padding: 0;
+	margin: 0;
+	
+	ul {
+		padding: 0;
+		margin: 0;
+		li {
+			position: relative;
+			margin: 0 0 10px 0;
+		}
+	}
+	label {
+		color: #fff;
+		font-size: 14px !important;
+		margin: 0;
+		padding: 0 15px;
+		position: absolute;
+		height: 100%;
+		background: #333;
+		line-height: normal;
+		display: flex;
+		text-align: center;
+		align-items: center;
+	}
+	.textarea {
+		margin: 0;
+		
+		label {
+			height: auto;
+			padding: 8px 15px;
+		}
+	}	
+	input,textarea {
+		background: none;
+		background: 0 0;
+	    border: solid 2px #333;
+	    outline: none;
+	    padding: 0.1rem 0.1rem 0.1rem 80px;
+	    color: #fff;
+	    width: 100%;
+	    font-size: 14px;
+	}
+	textarea {
+		max-height: 120px;
+		padding: 0.1rem 0.5rem;
+		text-indent: 100px;
+	}
+	input[type="submit"] {
+		padding: 0.1rem 0.5rem;
+		width: auto;
+		background: #333;
+		transition: all ease 0.5s;
+		
+		&:hover {
+			background: #222;
+			border: solid 2px #222;
+			cursor: pointer;
+		}
+	}
+
 }
 
 /* Parallax */

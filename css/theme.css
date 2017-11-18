@@ -9170,7 +9170,7 @@ h3 {
   text-transform: uppercase;
   line-height: 2rem; }
 
-p, ul, ul li, a, div, label {
+p, ul, ul li, a, div, label, input[type="submit"] {
   font-family: Venti;
   font-size: 21px;
   font-weight: 500;
@@ -9178,9 +9178,9 @@ p, ul, ul li, a, div, label {
   letter-spacing: 0;
   line-height: 33px; }
 
-label.gfield_label {
-  font-weight: 800 !important;
-  font-size: 1.1rem !important;
+label.gfield_label, input[type="submit"] {
+  font-weight: 800;
+  font-size: 1.1rem;
   margin: 0 !important;
   text-transform: uppercase; }
 
@@ -9483,7 +9483,7 @@ iframe {
   -webkit-box-shadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 40px 40px -40px rgba(0, 0, 0, 0.3); }
-  #wrapper-footer h4, #wrapper-footer h5, #wrapper-footer p, #wrapper-footer address {
+  #wrapper-footer h4, #wrapper-footer h5, #wrapper-footer p, #wrapper-footer address, #wrapper-footer label {
     font-family: Venti;
     font-size: 16px;
     font-weight: 700;
@@ -9498,6 +9498,9 @@ iframe {
     @media (max-width: 767px) {
       #wrapper-footer .site-info {
         text-align: center; } }
+    #wrapper-footer .site-info img {
+      display: flex;
+      margin: 0 auto; }
 
 /* Forms, Misc and all that jazz */
 /* Forms */
@@ -9505,6 +9508,58 @@ iframe {
   background: #f6f6f6;
   padding: 3rem;
   margin: -2rem; }
+  .gform_wrapper ul li {
+    list-style-type: none; }
+
+footer .gform_wrapper {
+  background: none;
+  padding: 0;
+  margin: 0; }
+  footer .gform_wrapper ul {
+    padding: 0;
+    margin: 0; }
+    footer .gform_wrapper ul li {
+      position: relative;
+      margin: 0 0 10px 0; }
+  footer .gform_wrapper label {
+    color: #fff;
+    font-size: 14px !important;
+    margin: 0;
+    padding: 0 15px;
+    position: absolute;
+    height: 100%;
+    background: #333;
+    line-height: normal;
+    display: flex;
+    text-align: center;
+    align-items: center; }
+  footer .gform_wrapper .textarea {
+    margin: 0; }
+    footer .gform_wrapper .textarea label {
+      height: auto;
+      padding: 8px 15px; }
+  footer .gform_wrapper input, footer .gform_wrapper textarea {
+    background: none;
+    background: 0 0;
+    border: solid 2px #333;
+    outline: none;
+    padding: 0.1rem 0.1rem 0.1rem 80px;
+    color: #fff;
+    width: 100%;
+    font-size: 14px; }
+  footer .gform_wrapper textarea {
+    max-height: 120px;
+    padding: 0.1rem 0.5rem;
+    text-indent: 100px; }
+  footer .gform_wrapper input[type="submit"] {
+    padding: 0.1rem 0.5rem;
+    width: auto;
+    background: #333;
+    transition: all ease 0.5s; }
+    footer .gform_wrapper input[type="submit"]:hover {
+      background: #222;
+      border: solid 2px #222;
+      cursor: pointer; }
 
 /* Parallax */
 .paraxify {

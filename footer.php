@@ -43,7 +43,7 @@ $footer_logo = get_field( 'footer_logo', 'option' );
 				</div><!-- .site-info -->
 	
 				<div class="site-info col-sm-4 col-xs-10">					
-					<p>Newsletter sign up goes here</p>
+					<?php gravity_form(2, false, false, false, '', true, 12); ?>
 				</div><!-- .site-info -->
 	
 			</footer><!-- #colophon -->
