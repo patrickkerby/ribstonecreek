@@ -20,13 +20,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php wp_head(); ?>
 	<?php
 		if( is_page( 'contact' ) ) { ?>
-
-	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.css' rel='stylesheet' />
-
+	
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js'></script>
+	    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.css' rel='stylesheet' />
+	
 	<?php } else {
-			//no map
-		}?>
+				//no map
+	}?>
 		
 	<script>
 	  (function(d) {
@@ -47,6 +47,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php
 $hero = get_field('background_image');
 $overlay = get_field('overlay');	
+$hero_news = get_field('background_image', get_option('page_for_posts'));
+$overlay_news = get_field('overlay', get_option('page_for_posts'));	
 $logo = get_field('logo');
 ?>
 <div class="hfeed site" id="page">
@@ -57,7 +59,13 @@ $logo = get_field('logo');
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
 		'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay; ?>), rgba(45,51,55,0.<?php echo $overlay; ?>)), url('<?php echo $hero; ?>');">
+		<?php if ( is_front_page() ) : ?>
+			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay; ?>), rgba(45,51,55,0.<?php echo $overlay; ?>)), url('<?php echo $hero; ?>');">
+		<?php elseif ( is_home() ) : ?>
+			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay_news; ?>), rgba(45,51,55,0.<?php echo $overlay_news; ?>)), url('<?php echo $hero_news; ?>');">
+		<?php else : ?>
+			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay; ?>), rgba(45,51,55,0.<?php echo $overlay; ?>)), url('<?php echo $hero; ?>');">
+		<?php endif; ?>
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container">
