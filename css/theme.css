@@ -9157,7 +9157,15 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
-h2 {
+p, ul, ul li, a, div, label, input[type="submit"] {
+  font-family: Venti;
+  font-size: 21px;
+  font-weight: 500;
+  color: #434343;
+  letter-spacing: 0;
+  line-height: 33px; }
+
+h2, h2 a {
   font-family: Venti;
   font-size: 1.75rem;
   font-weight: 800;
@@ -9169,23 +9177,6 @@ h3 {
   font-weight: 900;
   text-transform: uppercase;
   line-height: 2rem; }
-
-p, ul, ul li, a, div, label, input[type="submit"] {
-  font-family: Venti;
-  font-size: 21px;
-  font-weight: 500;
-  color: #434343;
-  letter-spacing: 0;
-  line-height: 33px; }
-
-label.gfield_label, input[type="submit"] {
-  font-weight: 800;
-  font-size: 1.1rem;
-  margin: 0 !important;
-  text-transform: uppercase; }
-
-div span label {
-  font-size: 0.9rem !important; }
 
 #content ul li {
   border-bottom: solid 3px #f5f5f5; }
@@ -9296,15 +9287,15 @@ iframe {
   z-index: 999; }
 
 /* Default Page Teplate */
-.page-template-fullwidthpage .content-area {
+.content-area {
   padding: 6rem 0; }
-  .page-template-fullwidthpage .content-area h2, .page-template-fullwidthpage .content-area h3, .page-template-fullwidthpage .content-area h4, .page-template-fullwidthpage .content-area ul, .page-template-fullwidthpage .content-area .tiled-gallery {
+  .content-area h2, .content-area h3, .content-area h4, .content-area ul, .content-area .tiled-gallery {
     margin: 0 0 2.5rem 0; }
-  .page-template-fullwidthpage .content-area p {
+  .content-area p {
     margin: 0 0 1.5rem 0; }
-  .page-template-fullwidthpage .content-area ul li {
+  .content-area ul li {
     border: none; }
-  .page-template-fullwidthpage .content-area hr {
+  .content-area hr {
     width: 45%;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -9476,6 +9467,10 @@ iframe {
     background: #fff;
     color: #333; }
 
+/* News Page */
+.blog .page-title {
+  font-size: 90px; }
+
 /* Footer Style */
 #wrapper-footer {
   background-size: cover;
@@ -9504,6 +9499,15 @@ iframe {
 
 /* Forms, Misc and all that jazz */
 /* Forms */
+label.gfield_label, input[type="submit"] {
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin: 0 !important;
+  text-transform: uppercase; }
+
+div span label {
+  font-size: 0.9rem !important; }
+
 .gform_wrapper {
   background: #f6f6f6;
   padding: 3rem;

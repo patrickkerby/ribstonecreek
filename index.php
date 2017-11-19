@@ -21,7 +21,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 		<div class="row no-gutters justify-content-center">
 
-			<div class="col-md-8 col-10 content-area" id="primary">
+			<div class="col-md-6 col-8 content-area" id="primary">
 
 				<?php if ( have_posts() ) : ?>
 
