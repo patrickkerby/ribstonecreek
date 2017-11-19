@@ -50,6 +50,7 @@ $overlay = get_field('overlay');
 $hero_news = get_field('background_image', get_option('page_for_posts'));
 $overlay_news = get_field('overlay', get_option('page_for_posts'));	
 $logo = get_field('logo');
+$news_title = get_the_title( get_option('page_for_posts', true) );
 ?>
 <div class="hfeed site" id="page">
 
@@ -71,17 +72,18 @@ $logo = get_field('logo');
 			<div class="container">
 		<?php endif; ?>
 
-				<?php if (!empty($logo)) { ?>
-			
+			<?php if (!empty($logo)) : ?>			
 				<img src="<?php echo( $logo ); ?>" />
 
-			    <?php }
-				    else { ?>
-				    
-						<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						<h1 class="page-title"><?php the_title() ?></h1>    
-		        			    
-				<?php } ?>
+			<?php elseif ( is_home() ) : ?>
+				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+				<h1 class="page-title"><?php echo $news_title; ?></h1>    	        				        			    
+
+			<?php else : ?>
+				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+				<h1 class="page-title"><?php the_title() ?></h1>    	        				        			    
+		<?php endif; ?>
+			
 					
 				<button class="navbar-toggler pull-right" type="button" data-toggle="modal" data-target="#modalNavigation">
 					<span class="navbar-toggler-icon"></span>

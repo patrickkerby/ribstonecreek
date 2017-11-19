@@ -9224,6 +9224,7 @@ iframe {
     font-weight: normal;
     text-align: center;
     letter-spacing: 0.21px;
+    line-height: 9rem;
     color: #fff;
     width: 100%;
     display: inline-block; }
@@ -9426,6 +9427,7 @@ iframe {
     font-weight: normal;
     text-align: center;
     letter-spacing: 0.21px;
+    line-height: 9rem;
     color: #fff;
     width: 100%; }
     .home section h2 {
@@ -9468,8 +9470,19 @@ iframe {
     color: #333; }
 
 /* News Page */
-.blog .page-title {
-  font-size: 90px; }
+.blog h2 {
+  margin: 0;
+  padding: 0; }
+
+.blog article {
+  margin: 0 0 4rem 0; }
+  .blog article header {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.05); }
+    .blog article header .entry-meta span, .blog article header .entry-meta a {
+      font-size: 16px;
+      font-weight: 600; }
 
 /* Footer Style */
 #wrapper-footer {

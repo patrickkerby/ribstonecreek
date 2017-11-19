@@ -388,11 +388,30 @@ iframe {
 }
 
 /* News Page */
-
 .blog {
-	.page-title {
-		font-size: 90px;
+	
+	h2 {
+		margin: 0;
+		padding: 0;
 	}
+	
+	article {
+		margin: 0 0 4rem 0;
+		
+		header {
+			padding-bottom: 1rem;
+			margin-bottom: 1rem;
+		    border-bottom: 4px solid rgba(0,0,0,.05);
+		    
+		    .entry-meta span, .entry-meta a {
+			    font: {
+				    size: 16px;
+				    weight: 600;
+			    }
+		    }
+		}
+	}
+		
 }
 
 /* Footer Style */
