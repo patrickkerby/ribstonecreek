@@ -9227,7 +9227,8 @@ iframe {
     line-height: 9rem;
     color: #fff;
     width: 100%;
-    display: inline-block; }
+    display: inline-block;
+    padding: 0 3rem; }
     .navbar .page-title {
       font-size: 80px; }
       @media screen and (min-width: 320px) {
