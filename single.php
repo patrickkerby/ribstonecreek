@@ -25,8 +25,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-						<?php understrap_post_nav(); ?>
-
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) :
@@ -38,18 +36,11 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 			</main><!-- #main -->
 
-		</div><!-- #primary -->
+		</div><!-- .row -->
 
-		<!-- Do the right sidebar check -->
-		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
+		<?php understrap_post_nav(); ?>
 
-			<?php get_sidebar( 'right' ); ?>
-
-		<?php endif; ?>
-
-	</div><!-- .row -->
-
-</div><!-- Container end -->
+	</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 

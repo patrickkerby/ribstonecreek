@@ -47,13 +47,11 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 				<?php endif; ?>
 
-			</main><!-- #main -->
-
+			</div>
+			
 			<!-- The pagination component -->
 			<?php understrap_pagination(); ?>
-
-		</div><!-- #primary -->
-
+		
 	</div><!-- .row end -->
 
 </div><!-- Wrapper end -->

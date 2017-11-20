@@ -10,8 +10,6 @@
 
 	<header class="entry-header wow fadeIn col-8" data-wow-duration="1s" >
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
 		<div class="entry-meta">
 
 			<?php understrap_posted_on(); ?>

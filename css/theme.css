@@ -9220,7 +9220,6 @@ iframe {
     margin: 2rem 0 0 0; }
   .navbar .page-title {
     font-family: bourbon, serif;
-    font-size: 202px;
     font-weight: normal;
     text-align: center;
     letter-spacing: 0.21px;
@@ -9424,7 +9423,6 @@ iframe {
     background-image: linear-gradient(rgba(45, 51, 55, 0.3), rgba(45, 51, 55, 0.4)); }
   .home section h2 {
     font-family: bourbon, serif;
-    font-size: 202px;
     font-weight: normal;
     text-align: center;
     letter-spacing: 0.21px;
@@ -9481,9 +9479,19 @@ iframe {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     border-bottom: 4px solid rgba(0, 0, 0, 0.05); }
-    .blog article header .entry-meta span, .blog article header .entry-meta a {
-      font-size: 16px;
-      font-weight: 600; }
+
+.entry-meta span, .entry-meta a {
+  margin-right: 8px;
+  font-size: 16px;
+  font-weight: 600; }
+
+/* Single Post */
+.single-post .content-area {
+  padding: 6rem 0 3rem 0; }
+
+.single-post .post-navigation {
+  border-top: 4px solid rgba(0, 0, 0, 0.05);
+  padding: 3rem; }
 
 /* Footer Style */
 #wrapper-footer {
@@ -9613,18 +9621,19 @@ body {
 
 /* Edit Links */
 .edit-link a.post-edit-link {
-  display: inline-block;
-  margin: 2rem 0 0 0;
-  padding: 8px 24px;
-  background: #cecece;
-  color: #ffffff;
+  margin: 0;
+  padding: 3px 8px 1px 8px;
+  border: solid 2px #ccc;
+  color: #ccc;
   font-family: Venti;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 800;
+  text-transform: uppercase;
   transition: all 0.5s ease; }
   .edit-link a.post-edit-link:hover {
     text-decoration: none;
-    background: #bebebe; }
+    color: #aaa;
+    border: solid 2px #aaa; }
 
 #map {
   height: 400px; }
