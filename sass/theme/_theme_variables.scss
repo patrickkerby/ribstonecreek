@@ -17,6 +17,10 @@
 	line-height: 9rem;
 	color: #fff;
 	width: 100%;
+
+	@include media-breakpoint-down(md) {
+		line-height: normal;
+	}
 }
 
 //The following sets variable font sizes for home page section.
@@ -46,7 +50,7 @@
 $min_width: 320px;
 $max_width: 1400px;
 $min_font: 80px;
-$max_font: 180px;
+$max_font: 170px;
 
 
 //The following sets variable font sizes for header sections. It's not working yet.

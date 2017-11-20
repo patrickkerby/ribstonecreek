@@ -406,12 +406,18 @@ iframe {
 		}
 	}		
 }
-.entry-meta span, .entry-meta a {
-    margin-right: 8px;
-    font: {
-	    size: 16px;
-	    weight: 600;
-    }
+.entry-meta {
+	    padding: 1rem;
+	    border: solid 3px #ddd;
+	    border-width: 3px 0;
+	    margin-bottom: 3rem;
+	span, a {
+	    margin-right: 8px;
+	    font: {
+		    size: 16px;
+		    weight: 600;
+	    }
+	}    
 }
 
 /* Single Post */

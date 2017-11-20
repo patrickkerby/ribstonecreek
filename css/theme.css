@@ -9228,14 +9228,17 @@ iframe {
     width: 100%;
     display: inline-block;
     padding: 0 3rem; }
+    @media (max-width: 991px) {
+      .navbar .page-title {
+        line-height: normal; } }
     .navbar .page-title {
       font-size: 80px; }
       @media screen and (min-width: 320px) {
         .navbar .page-title {
-          font-size: calc(80px + 100 * ((100vw - 320px) / 1080)); } }
+          font-size: calc(80px + 90 * ((100vw - 320px) / 1080)); } }
       @media screen and (min-width: 1400px) {
         .navbar .page-title {
-          font-size: 180px; } }
+          font-size: 170px; } }
   .navbar .navbar-nav li {
     margin: 0 15px; }
   .navbar .navbar-nav .nav-link {
@@ -9429,14 +9432,17 @@ iframe {
     line-height: 9rem;
     color: #fff;
     width: 100%; }
+    @media (max-width: 991px) {
+      .home section h2 {
+        line-height: normal; } }
     .home section h2 {
       font-size: 80px; }
       @media screen and (min-width: 320px) {
         .home section h2 {
-          font-size: calc(80px + 100 * ((100vw - 320px) / 1080)); } }
+          font-size: calc(80px + 90 * ((100vw - 320px) / 1080)); } }
       @media screen and (min-width: 1400px) {
         .home section h2 {
-          font-size: 180px; } }
+          font-size: 170px; } }
   .home section h3 {
     padding: 0.75rem 2rem;
     color: #fff;
@@ -9480,10 +9486,15 @@ iframe {
     margin-bottom: 1rem;
     border-bottom: 4px solid rgba(0, 0, 0, 0.05); }
 
-.entry-meta span, .entry-meta a {
-  margin-right: 8px;
-  font-size: 16px;
-  font-weight: 600; }
+.entry-meta {
+  padding: 1rem;
+  border: solid 3px #ddd;
+  border-width: 3px 0;
+  margin-bottom: 3rem; }
+  .entry-meta span, .entry-meta a {
+    margin-right: 8px;
+    font-size: 16px;
+    font-weight: 600; }
 
 /* Single Post */
 .single-post .content-area {
