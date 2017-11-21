@@ -35,7 +35,12 @@ $footer_logo = get_field( 'footer_logo', 'option' );
 					<h4><?php echo $address_title; ?></h4>
 					<address><?php echo $address; ?></address>
 					<h4><?php echo $hours_title; ?></h4>
-					<p><?php echo $hours; ?></p>							
+					<p><?php echo $hours; ?></p>
+					<div class="connect">
+						<a href="https://facebook.com/RibstoneCreekBrewery" target="_blank">&#xf09a;</a>
+						<a href="https://twitter.com/RibstoneCreek" target="_blank">&#xf099;</a>
+						<a href="https://www.instagram.com/ribstonecreek/" target="_blank">&#xf16d;</a>
+					</div>							
 				</div><!-- .site-info -->
 	
 				<div class="site-info col-sm-4 col-xs-10">					

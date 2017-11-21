@@ -9228,7 +9228,7 @@ iframe {
     width: 100%;
     display: inline-block;
     padding: 0 3rem; }
-    @media (max-width: 991px) {
+    @media (max-width: 767px) {
       .navbar .page-title {
         line-height: normal; } }
     .navbar .page-title {
@@ -9432,7 +9432,7 @@ iframe {
     line-height: 9rem;
     color: #fff;
     width: 100%; }
-    @media (max-width: 991px) {
+    @media (max-width: 767px) {
       .home section h2 {
         line-height: normal; } }
     .home section h2 {
@@ -9529,6 +9529,15 @@ iframe {
     #wrapper-footer .site-info img {
       display: flex;
       margin: 0 auto; }
+    #wrapper-footer .site-info .connect a {
+      font-family: FontAwesome;
+      color: #fff;
+      font-size: 18px;
+      margin: 0 15px 0 0;
+      transition: all 0.5s ease; }
+      #wrapper-footer .site-info .connect a:hover {
+        text-decoration: none;
+        color: #666; }
 
 /* Forms, Misc and all that jazz */
 /* Forms */

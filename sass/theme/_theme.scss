@@ -467,6 +467,19 @@ iframe {
 			display: flex;
 			margin: 0 auto;
 		}
+		
+		.connect a {
+			font-family: FontAwesome;
+			color: #fff;
+			font-size: 18px;
+			margin: 0 15px 0 0;
+			transition: all 0.5s ease;
+			
+			&:hover {
+				text-decoration: none;
+				color: #666;
+			}
+		}
 	}
 }
 
