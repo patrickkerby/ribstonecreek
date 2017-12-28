@@ -9203,6 +9203,8 @@ iframe {
   @media (min-width: 576px) {
     .navbar {
       background-attachment: fixed; } }
+  .single-product .navbar {
+    height: 300px; }
   .navbar img {
     max-width: 40%; }
     @media (max-width: 767px) {

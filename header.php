@@ -57,10 +57,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php
 $hero = get_field('background_image');
 $overlay = get_field('overlay');	
+$logo = get_field('logo');
+
 $hero_news = get_field('background_image', get_option('page_for_posts'));
 $overlay_news = get_field('overlay', get_option('page_for_posts'));	
-$logo = get_field('logo');
 $news_title = get_the_title( get_option('page_for_posts', true) );
+
+$hero_shop = get_field('background_image', get_option('woocommerce_shop_page_id'));
+$overlay_shop = get_field('overlay', get_option('woocommerce_shop_page_id'));	
+$shop_title = get_the_title( get_option('woocommerce_shop_page_id') );
+
+$hero_product = get_field('shop_header_image', 'option');
+
+
 ?>
 <div class="hfeed site" id="page">
 
@@ -74,6 +83,10 @@ $news_title = get_the_title( get_option('page_for_posts', true) );
 			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay; ?>), rgba(45,51,55,0.<?php echo $overlay; ?>)), url('<?php echo $hero; ?>');">
 		<?php elseif ( is_home() ) : ?>
 			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay_news; ?>), rgba(45,51,55,0.<?php echo $overlay_news; ?>)), url('<?php echo $hero_news; ?>');">
+		<?php elseif ( is_shop() ) : ?>
+			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay_shop; ?>), rgba(45,51,55,0.<?php echo $overlay_shop; ?>)), url('<?php echo $hero_shop; ?>');">
+		<?php elseif ( is_product() ) : ?>
+			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay_shop; ?>), rgba(45,51,55,0.<?php echo $overlay_shop; ?>)), url('<?php echo $hero_product; ?>');">
 		<?php else : ?>
 			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay; ?>), rgba(45,51,55,0.<?php echo $overlay; ?>)), url('<?php echo $hero; ?>');">
 		<?php endif; ?>
@@ -88,6 +101,14 @@ $news_title = get_the_title( get_option('page_for_posts', true) );
 			<?php elseif ( is_home() ) : ?>
 				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 				<h1 class="page-title"><?php echo $news_title; ?></h1>    	        				        			    
+
+			<?php elseif ( is_shop() ) : ?>
+				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+				<h1 class="page-title"><?php echo $shop_title; ?></h1>    	        				        			    
+
+			<?php elseif ( is_product() ) : ?>
+				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+				<h1 class="page-title"><?php echo $shop_title; ?></h1>    	        				        			    
 
 			<?php else : ?>
 				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>

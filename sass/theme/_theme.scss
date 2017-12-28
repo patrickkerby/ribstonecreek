@@ -9,7 +9,7 @@ p, ul, ul li, a, div, label, input[type="submit"] {
 	letter-spacing: 0;
 	line-height: 33px;
 }
-h2, h2 a {
+h2, h2 a { 
 	font: { 
 		family: Venti;
 		size: 1.75rem;
@@ -58,7 +58,11 @@ iframe {
 	text-align: center;
 	flex-direction: column;
 	justify-content: center; 
-
+	
+	.single-product & {
+		height: 300px; 
+	}
+	
 	img {
 		max-width: 40%;
 		@include media-breakpoint-down(sm) {

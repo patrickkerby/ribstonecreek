@@ -17,16 +17,11 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 ?>
 
-<div class="wrapper" id="woocommerce-wrapper">
+<div class="wrapper" id="full-width-page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+		<div class="row no-gutters justify-content-center">
 
-		<div class="row">
-
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
-
-			<main class="site-main" id="main">
+			<div class="col-md-8 col-10 content-area" id="primary">
 
 			<?php 
 				$template_name = '\archive-product.php'; 
@@ -50,20 +45,16 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 			;?>
 
-			</main><!-- #main -->
-
-		</div><!-- #primary -->
-
+			</div>
+		
+		</div>
+		
 		<!-- Do the right sidebar check -->
 		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
 
 			<?php get_sidebar( 'right' ); ?>
 
 		<?php endif; ?>
-
-	</div><!-- .row -->
-
-</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 
