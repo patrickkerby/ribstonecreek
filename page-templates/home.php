@@ -30,7 +30,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			
 					?>
 					
-						<section class="row site-section justify-content-md-center paraxify" style="background-image: url('<?php echo $image; ?>');">
+						<section class="row lazy site-section justify-content-md-center paraxify" data-src="<?php echo $image; ?>" style="background-image: url('<?php echo $image; ?>');">
 							<div class="col-md-10">
 							    <h2><?php echo( $title ); ?></h2>
 							    <h3><?php echo( $description ); ?></h3>

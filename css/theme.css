@@ -9204,7 +9204,7 @@ iframe {
     .navbar {
       background-attachment: fixed; } }
   .single-product .navbar {
-    height: 300px; }
+    height: 50vh; }
   .navbar img {
     max-width: 40%; }
     @media (max-width: 767px) {
@@ -9241,6 +9241,14 @@ iframe {
       @media screen and (min-width: 1400px) {
         .navbar .page-title {
           font-size: 170px; } }
+    .single-product .navbar .page-title {
+      font-size: 40px; }
+      @media screen and (min-width: 320px) {
+        .single-product .navbar .page-title {
+          font-size: calc(40px + 70 * ((100vw - 320px) / 1080)); } }
+      @media screen and (min-width: 1400px) {
+        .single-product .navbar .page-title {
+          font-size: 110px; } }
   .navbar .navbar-nav li {
     margin: 0 15px; }
   .navbar .navbar-nav .nav-link {

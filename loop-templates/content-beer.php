@@ -14,12 +14,12 @@ $container_type = get_field("container");
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>" class="row no-gutters">
 
-	<header class="entry-header wow fadeIn col-lg-12" data-wow-duration="1s" style="background-image: url('<?php echo $artwork; ?>');"></header>
+	<header class="entry-header lazy wow fadeIn col-lg-12" data-src="<?php echo $artwork; ?>" data-wow-duration="1s" style="background-image: url('<?php echo $artwork; ?>');"></header>
 
 	<div class="entry-content row justify-content-center no-gutters">
 
 		<div class="can <?php echo $container_type; ?> col-md-3 col-sm-4 col-10">
-			<img src="<?php echo $can; ?>" class="wow fadeIn" data-wow-duration="1.4s" />
+			<img data-src="<?php echo $can; ?>" src="<?php echo $can; ?>" class="lazy wow fadeIn" data-wow-duration="1.4s" /> 
 		</div>
 
 		<div class="details col-md-6 col-sm-6 wow fadeIn" data-wow-duration="2.75s">
