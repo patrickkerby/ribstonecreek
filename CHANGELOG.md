@@ -1,11 +1,51 @@
+            - ** Release 0.8.2 April 11th 2018 **
+              - Update to Bootstrap 4.1
+              - Adding CONTRIBUTING.md and ISSUE_TEMPLATE.md - Thx @Thomas-A-Reinert
+              - Adding empty JS file into build process for adding own JS more easily - Thx @Thomas-A-Reinert
+              - WooCommerce update and cleanup - Thx @ZacharyElkins
+              - Adding SASS source map functionality - Thx @axlright
+              - Cleanup - Thx @axlright
+              - Adding custom editor SASS stylesheet into build process
+              - Remove woocommerce.php integration and replace it with hooked approach - See: https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/#section-5
+              - New pagination - Thx @0dp
+              - Update functions.php - Thx @0dp
+              - Add pluggable functions - Thx @axlright
+              - Add polish translation - Thx @mirzal
+              - Adding timestamp to js and css resources to prevent caching while developinh - Thx @@gintsmurans
+              - Improve left sidebar check - Thx @ZacharyElkins
+
+
+            - ** Release 0.8.1 March 7th 2018 **
+              - Updating dependencies
+              - Fixing and improing gulpfile.js - thx @0dp
+              - add function exists check in custom-comments.php  - Thx @MarieComet
+              - Updated the markup for input groups according to BS 4 changes - Thx @IngoVals
+              - Lot of fixes and improvements - Thx @Thomas-A-Reinert and @lilolbear
+              - Fixes invalid code due to WP´s itemprop insertion - Thx @Thomas-A-Reinert
+              - Enhanced contrast to comply with WCAG 2.0 rules - Thx @Thomas-A-Reinert
+              - Completed german translation, fixed typos etc. - Thx @Thomas-A-Reinert
+              - Fixing typos in FR translation - Thx @MarieComet
+              - Adding hebrew language file - Thx @asaf147369
+              - Adding gulp-autoprefixer - Thx @axlright
+              - Updating WooCommerce compatibility
+              - Adding turkish translation - thx @mavisland
+              - Adding gulpconfig - Thx @lilolbear
+              - Enable woocommerce product gallery slider by default. - Thx @typeplus
+
+            - ** Release 0.8.0 January 22th 2018 **
+              - Update to Bootstrap 4 (no more Beta...)
+
+
             - ** Release 0.7.0 December 29th 2017 **
               - Update to Bootstrap 4 Beta 3
               - Create rigth-sidebar-check.php - Thx @Vishal-Deshpande
               - Fixing container type customizer setting - Thx @0dp
               - Fixing comments.php - Thx @Vishal-Deshpande
 
+
             - ** Release 0.6.12 December 14th 2017 **
               - Hotfix release
+
 
             - ** Release 0.6.11 December 11th 2017 ** 
               - Fixing WooCommerce functions
@@ -19,6 +59,7 @@
             - ** Release 0.6.10 December 4th 2017 **
               - Hotfix release
 
+
             - ** Release 0.6.9 November 28th 2017 **
               - Basic guideline adjustments
               - Update prefixes
@@ -29,10 +70,10 @@
               - Remove jQuery 3.2.1 slim and switch back to WP core jQuery version
               - Update Bootstrap 4 Beta 2 to commit which fixes jQuery conflict
 
-
             - ** Release 0.6.8 November 27th 2017 **
               - Theme check updates
               - Bugfix release            
+
 
             - ** Release 0.6.7 November 24th 2017 **
               - Workaround for jQuery inconsistency problem between Bootstrap Beta 2 and WordPress in noConflict mode
@@ -58,8 +99,10 @@
             - ** Release 0.6.5 August 17h 2017 **
               - Hot fix release
 
+
             - ** Release 0.6.4.1 August 17h 2017 **
               - Hot fix release - Rebuild new Bootstrap 4 Beta navbar markup into UnderStrap
+
 
             - ** Release 0.6.3 August 14h 2017 **
                - Update to Bootstrap 4 Beta
