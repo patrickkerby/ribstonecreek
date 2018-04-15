@@ -9,7 +9,7 @@ p, ul, ul li, a, div, label, input[type="submit"] {
 	letter-spacing: 0;
 	line-height: 33px;
 }
-h2, h2 a {
+h2, h2 a { 
 	font: { 
 		family: Venti;
 		size: 1.75rem;
@@ -26,6 +26,15 @@ h3 {
 	text-transform: uppercase;
 	line-height: 2rem;
 } 
+a {
+	&:link, &:active {
+	
+	}
+	&a:hover {
+		color: $ribstone-gold;
+	}
+	
+}
 
 #content ul {
 	li {
@@ -58,7 +67,11 @@ iframe {
 	text-align: center;
 	flex-direction: column;
 	justify-content: center; 
-
+	
+	.single-product & {
+		height: 50vh; 
+	}
+	
 	img {
 		max-width: 40%;
 		@include media-breakpoint-down(sm) {
@@ -82,6 +95,10 @@ iframe {
 		@include fluid-type($min_width, $max_width, $min_font, $max_font);
 		display: inline-block;
 		padding: 0 3rem;
+		
+		.single-product & {
+		@include fluid-type($min_width, $max_width, 40px, 110px);
+		}
 	}
 	.navbar-nav {
 		
@@ -157,7 +174,9 @@ iframe {
 	right: 10px;
 	z-index: 999;
 }
-
+.navbar-collapse {
+	flex-grow: inherit;
+}
 /* Default Page Teplate */
 
 .content-area {
@@ -442,6 +461,17 @@ iframe {
 		}    
 	}
 
+}
+/* WooCommerce */
+/* Product Single */
+
+.single-product {
+	section.related {
+		clear: both;
+		margin-top: 6rem;
+		padding-top: 3rem;
+		border-top: 2px solid #dcdcdc;
+	}
 }
 
 /* Footer Style */
