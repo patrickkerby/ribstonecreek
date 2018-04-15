@@ -188,28 +188,6 @@ function woo_remove_product_tabs( $tabs ) {
 }
 
 
-function addWooCommerceProductBodyClasses($classes){
- 
-    if ( is_product() ) {
-        global $post;
-        $product = get_product( $post->ID );
- 
-        if ( $product->product_type == 'simple' ) {
-            $classes[] = 'simple-product';
-        } elseif ( $product->product_type == 'variable' ) {
-            $classes[] = 'variable-product';
-        } elseif ( $product->product_type == 'external' ) {
-            $classes[] = 'external-product';
-        } elseif ( $product->product_type == 'bto' || $product->product_type == 'composite' ) {
-            $classes[] = 'composite-product';
-        } elseif ( $product->product_type == 'bundle' ) {
-            $classes[] = 'bundle-product';
-        }
-    }
- 
-    return $classes;
-}
-add_filter( 'body_class', 'addWooCommerceProductBodyClasses' );
 
 // First, remove Add to Cart Button
  
