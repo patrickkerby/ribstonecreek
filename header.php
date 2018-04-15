@@ -136,7 +136,7 @@ $hero_product = get_field('shop_header_image', 'option');
 								'menu_class'      => 'navbar-nav',
 								'fallback_cb'     => '',
 								'menu_id'         => 'hamburger-menu',
-								'walker'          => new WP_Bootstrap_Navwalker(),
+								'walker'          => new understrap_WP_Bootstrap_Navwalker(),
 							)
 						); ?>
 				
@@ -151,7 +151,7 @@ $hero_product = get_field('shop_header_image', 'option');
 						'menu_class'      => 'navbar-nav',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
-						'walker'          => new WP_Bootstrap_Navwalker(),
+						'walker'          => new understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
 			<?php if ( 'container' == $container ) : ?>

@@ -26,6 +26,15 @@ h3 {
 	text-transform: uppercase;
 	line-height: 2rem;
 } 
+a {
+	&:link, &:active {
+	
+	}
+	&a:hover {
+		color: $ribstone-gold;
+	}
+	
+}
 
 #content ul {
 	li {
@@ -165,7 +174,9 @@ iframe {
 	right: 10px;
 	z-index: 999;
 }
-
+.navbar-collapse {
+	flex-grow: inherit;
+}
 /* Default Page Teplate */
 
 .content-area {
@@ -450,6 +461,17 @@ iframe {
 		}    
 	}
 
+}
+/* WooCommerce */
+/* Product Single */
+
+.single-product {
+	section.related {
+		clear: both;
+		margin-top: 6rem;
+		padding-top: 3rem;
+		border-top: 2px solid #dcdcdc;
+	}
 }
 
 /* Footer Style */

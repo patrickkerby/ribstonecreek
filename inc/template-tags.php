@@ -31,8 +31,8 @@ function understrap_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
-	
-		// Hide category and tag text for pages.
+
+	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'understrap' ) );
