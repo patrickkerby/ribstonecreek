@@ -9596,6 +9596,9 @@ h3 {
   text-transform: uppercase;
   line-height: 2rem; }
 
+aa:hover {
+  color: #FF66CC; }
+
 #content ul li {
   border-bottom: solid 3px #f5f5f5; }
   #content ul li:nth-last-child(1) {

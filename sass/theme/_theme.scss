@@ -26,6 +26,15 @@ h3 {
 	text-transform: uppercase;
 	line-height: 2rem;
 } 
+a {
+	&:link, &:active {
+	
+	}
+	&a:hover {
+		color: $ribstone-gold;
+	}
+	
+}
 
 #content ul {
 	li {
