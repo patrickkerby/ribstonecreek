@@ -36,3 +36,12 @@
 
 $headings: bourbon, serif;
 $font-family-sans-serif: Venti, Arial, sans-serif;
+
+@mixin systemlinks {
+	font-family: $font-family-sans-serif;
+	font-weight: 900;
+	font-size: 16px;
+	letter-spacing: 1.5px;
+	line-height: 23px;
+	text-transform: uppercase;
+}
