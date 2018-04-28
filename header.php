@@ -69,6 +69,11 @@ $shop_title = get_the_title( get_option('woocommerce_shop_page_id') );
 
 $hero_product = get_field('shop_header_image', 'option');
 
+$term = get_queried_object();
+$termname = $term->name;
+$hero_taxonomy = get_field('background_image', $term);
+$overlay_taxonomy = get_field('overlay', $term);	
+$taxonomy_title = get_the_title( $term );
 
 ?>
 <div class="hfeed site" id="page">
@@ -87,6 +92,8 @@ $hero_product = get_field('shop_header_image', 'option');
 			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay_shop; ?>), rgba(45,51,55,0.<?php echo $overlay_shop; ?>)), url('<?php echo $hero_shop; ?>');">
 		<?php elseif ( is_product() ) : ?>
 			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay_shop; ?>), rgba(45,51,55,0.<?php echo $overlay_shop; ?>)), url('<?php echo $hero_product; ?>');">
+		<?php elseif ( is_tax() ) : ?>
+			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay_taxonomy; ?>), rgba(45,51,55,0.<?php echo $overlay_taxonomy; ?>)), url('<?php echo $hero_taxonomy; ?>');">
 		<?php else : ?>
 			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay; ?>), rgba(45,51,55,0.<?php echo $overlay; ?>)), url('<?php echo $hero; ?>');">
 		<?php endif; ?>
@@ -109,6 +116,10 @@ $hero_product = get_field('shop_header_image', 'option');
 			<?php elseif ( is_product() ) : ?>
 				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 				<h1 class="page-title"><?php echo $shop_title; ?></h1>    	        				        			    
+
+			<?php elseif ( is_tax() ) : ?>
+				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+				<h1 class="page-title"><?php echo $termname; ?></h1>    	        				        			    
 
 			<?php else : ?>
 				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
