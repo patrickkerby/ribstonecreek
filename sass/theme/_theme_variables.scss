@@ -78,7 +78,11 @@ $max_width: 1400px;
 $min_head: 40vh;
 $max_head: 70vh;
 
+@mixin slowfade() {
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
+}
 
-
-$brand-primary: #FFCA40; 
-$ribstone-gold: #FF66CC;
+$brand-primary: #F0C745; 
+$ribstone-gold: #F0C745;

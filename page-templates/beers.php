@@ -11,38 +11,41 @@ get_header();
 ?>
 
 <?php
-$container = get_theme_mod( 'understrap_container_type' );
+	$container = get_theme_mod( 'understrap_container_type' );
+	$tax_terms = get_terms( array(
+		'taxonomy' => 'beer-types',
+		'meta_key' => 'order_by',
+	    'orderby' => 'order_by'
+	) );			
 ?>
 
 <div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 	<div class="row">
 
-		<div class="thecontent" class="col-lg-12"><?php the_content(); ?></div>
+		<div class="thecontent" class="col-lg-12">
+			<?php the_content(); ?>
+		</div>
 
-		<?php
-		    $args = array( 'post_type' => 'beer' );
-		    $beers = new WP_Query( $args );
-		    if( $beers->have_posts() ) {
-		      while( $beers->have_posts() ) {
-		        $beers->the_post();
-		        ?>
+	</div>
 
-				<?php
+	<div class="container">
+		
+		<div class="row d-flex align-items-end flex-wrap row-eq-height beergrid">
+			
+			<?php
+			
+			foreach ($tax_terms as $tax_term) {
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'loop-templates/content-beer', get_post_format() );
-				
-		      }
-		    }
-		    else {
-				get_template_part( 'loop-templates/content', 'none' );
-		    }
-		?>
+				$thumbnail = get_field('lineup_main_image', $tax_term);
+
+				echo '<div class="col-md-4 col-sm-6">' . '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . '<img src="' . $thumbnail . '" /><span>' . $tax_term->name.'</span></a></div>';			
+	
+			}
+
+			?>
+
+		</div>
 
 	</div> <!-- Row end -->
 

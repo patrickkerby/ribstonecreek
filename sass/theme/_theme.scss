@@ -1,7 +1,7 @@
 // Global
 p, ul, ul li, a, div, label, input[type="submit"] {
 	font: {
-		family: Venti;
+		family: Venti; 
 		size: 21px;
 		weight: 500;
 	}
@@ -177,8 +177,8 @@ iframe {
 .navbar-collapse {
 	flex-grow: inherit;
 }
-/* Default Page Teplate */
 
+/* Default Page Teplate */
 .content-area {
 	padding: 6rem 0;
 	
@@ -207,7 +207,7 @@ iframe {
 
 /* Beers CPT Archive (.post-type-archive-beer)*/
 
-.page-template-beers {
+.page-template-beers, .tax-beer-types {
  	h2 {
 		font-family: $headings;
 		font-weight: normal;
@@ -330,6 +330,57 @@ iframe {
 	}
 	span:nth-last-child(1):after {
 		content: none;	
+	}
+}
+.beergrid {
+	margin: 0 0 80px 0;
+	
+	div {
+		margin: 80px 0 0 0;
+		text-align: center;
+		border-right: solid 2px #ECECEC;
+
+		a {
+
+			span {
+				@include systemlinks; 
+				color: #7F8894;
+				width: 100%;
+				display: inline-block;
+				margin-top: 20px;
+				width: 100%;
+				padding: 0 15%;
+				@include slowfade();
+			}
+			img {
+				filter: drop-shadow(0 0 13px rgba(0, 0, 0, 0.18));
+				-webkit-transform: translateZ(0);			
+				@include slowfade();
+			}
+							
+			&:hover {
+				span {
+					color: $ribstone-gold;
+				}
+				img {
+					filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+				}
+					
+			}		
+		}	
+		@include media-breakpoint-up(md) {
+			border-right: solid 2px #ECECEC;
+			&:nth-child(3n+3) {
+				border: none;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			border-right: solid 2px #ECECEC;
+			&:nth-child(2n+2) {
+				border: none;
+			}
+		}
+
 	}
 }
 
