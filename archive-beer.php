@@ -11,24 +11,16 @@ get_header();
 ?>
 
 <?php
-$container   = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper" id="archive-wrapper">
+<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="row">
 
-		<div class="row">
-
-			<main class="site-main" id="main">
+		<div class="thecontent" class="col-lg-12"><?php the_content(); ?></div>
 
 				<?php if ( have_posts() ) : ?>
-
-					<header class="page-header">
-						<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						?>
-					</header><!-- .page-header -->
 
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -51,19 +43,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 				<?php endif; ?>
 
-			</main><!-- #main -->
-
-			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
-
-		</div><!-- #primary -->
-
-	</div> <!-- .row -->
+	</div> <!-- Row end -->
 
 </div><!-- Container end -->
 
-</div><!-- Wrapper end -->
-
-
-
 <?php get_footer(); ?>
+

@@ -111,6 +111,7 @@ if ( ! function_exists ( 'understrap_post_nav' ) ) {
 
 // Redirect Beer Single Pages to Beer Archive
 
+/*
 add_action( 'template_redirect', 'rsc_redirect_post' );
 
 function rsc_redirect_post() {
@@ -120,7 +121,7 @@ function rsc_redirect_post() {
     exit;
   }
 }
-
+*/
 
 // Add ACF Options Page
 if( function_exists('acf_add_options_page') ) {
@@ -203,3 +204,108 @@ global $product;
 $link = $product->get_permalink();
 echo do_shortcode('<a href="'.$link.'" class="add_to_cart_button">View Product</a>');
 }
+
+function cptui_register_my_cpts() {
+
+	/**
+	 * Post Type: Beers.
+	 */
+
+	$labels = array(
+		"name" => __( "Beers", "ribstonecreek" ),
+		"singular_name" => __( "Beer", "ribstonecreek" ),
+	);
+
+	$args = array(
+		"label" => __( "Beers", "ribstonecreek" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => false,
+		"rest_base" => "",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => true,
+		"query_var" => true,
+		"menu_icon" => "dashicons-star-empty",
+		"supports" => array( "title", "editor" ),
+	);
+
+	register_post_type( "beer", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts' );
+
+function cptui_register_my_taxes() {
+
+	/**
+	 * Taxonomy: Beer Lineups.
+	 */
+
+	$labels = array(
+		"name" => __( "Beer Lineups", "ribstonecreek" ),
+		"singular_name" => __( "Beer Lineup", "ribstonecreek" ),
+		"all_items" => __( "All Lineups", "ribstonecreek" ),
+		"edit_item" => __( "Edit Lineup", "ribstonecreek" ),
+	);
+
+	$args = array(
+		"label" => __( "Beer Lineups", "ribstonecreek" ),
+		"labels" => $labels,
+		"public" => true,
+		"hierarchical" => true,
+		"label" => "Beer Lineups",
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"show_admin_column" => false,
+		"show_in_rest" => false,
+		"rest_base" => "",
+		"show_in_quick_edit" => true,
+		"rewrite" => array( 'slug' => 'beer' )
+	);
+		register_taxonomy( "beer-types", array( "beer" ), $args );
+}
+
+add_action( 'init', 'cptui_register_my_taxes' );
+
+/*
+ * Replace Taxonomy slug with Post Type slug in url
+ * Version: 1.1
+ */
+function taxonomy_slug_rewrite($wp_rewrite) {
+    $rules = array();
+    // get all custom taxonomies
+    $taxonomies = get_taxonomies(array('_builtin' => false), 'objects');
+    // get all custom post types
+    $post_types = get_post_types(array('public' => true, '_builtin' => false), 'objects');
+    
+    foreach ($post_types as $post_type) {
+        foreach ($taxonomies as $taxonomy) {
+	    
+            // go through all post types which this taxonomy is assigned to
+            foreach ($taxonomy->object_type as $object_type) {
+                
+                // check if taxonomy is registered for this custom type
+                if ($object_type == $post_type->rewrite['slug']) {
+		    
+                    // get category objects
+                    $terms = get_categories(array('type' => $object_type, 'taxonomy' => $taxonomy->name, 'hide_empty' => 0));
+		    
+                    // make rules
+                    foreach ($terms as $term) {
+                        $rules[$object_type . '/' . $term->slug . '/?$'] = 'index.php?' . $term->taxonomy . '=' . $term->slug;
+                    }
+                }
+            }
+        }
+    }
+    // merge with global rules
+    $wp_rewrite->rules = $rules + $wp_rewrite->rules;
+}
+add_filter('generate_rewrite_rules', 'taxonomy_slug_rewrite');
