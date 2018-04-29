@@ -267,7 +267,7 @@ function cptui_register_my_taxes() {
 		"show_in_rest" => false,
 		"rest_base" => "",
 		"show_in_quick_edit" => true,
-		"rewrite" => array( 'slug' => 'beer' ),
+		"rewrite" => array( 'slug' => 'beer' )
 	);
 		register_taxonomy( "beer-types", array( "beer" ), $args );
 }
