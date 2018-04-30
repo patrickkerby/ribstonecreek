@@ -102,31 +102,9 @@ $taxonomy_title = get_the_title( $term );
 			<div class="container">
 		<?php endif; ?>
 
-			<?php if (!empty($logo)) : ?>			
-				<img src="<?php echo( $logo ); ?>" />
 
-			<?php elseif ( is_home() ) : ?>
-				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-				<h1 class="page-title"><?php echo $news_title; ?></h1>    	        				        			    
+<!-- ========== Begin NAV ============= -->				
 
-			<?php elseif ( is_shop() ) : ?>
-				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-				<h1 class="page-title"><?php echo $shop_title; ?></h1>    	        				        			    
-
-			<?php elseif ( is_product() ) : ?>
-				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-				<h1 class="page-title"><?php echo $shop_title; ?></h1>    	        				        			    
-
-			<?php elseif ( is_tax() ) : ?>
-				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-				<h1 class="page-title"><?php echo $termname; ?></h1>    	        				        			    
-
-			<?php else : ?>
-				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-				<h1 class="page-title"><?php the_title() ?></h1>    	        				        			    
-		<?php endif; ?>
-			
-					
 				<button class="navbar-toggler pull-right" type="button" data-toggle="modal" data-target="#modalNavigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -157,14 +135,37 @@ $taxonomy_title = get_the_title( $term );
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav',
+						'container_class' => '',
+						'container_id'    => 'navbarNavDropdown-rsc',
+						'menu_class'      => 'navbar-nav-rsc',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'walker'          => new understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
+				
+<!-- ========== END NAV ============= -->				
+
+			<?php if (!empty($logo)) : ?>			
+				<img src="<?php echo( $logo ); ?>" />
+
+			<?php elseif ( is_home() ) : ?>
+				<h1 class="page-title"><?php echo $news_title; ?></h1>    	        				        			    
+
+			<?php elseif ( is_shop() ) : ?>
+				<h1 class="page-title"><?php echo $shop_title; ?></h1>    	        				        			    
+
+			<?php elseif ( is_product() ) : ?>
+				<h1 class="page-title"><?php echo $shop_title; ?></h1>    	        				        			    
+
+			<?php elseif ( is_tax() ) : ?>
+				<h1 class="page-title"><?php echo $termname; ?></h1>    	        				        			    
+
+			<?php else : ?>
+				<h1 class="page-title"><?php the_title() ?></h1>    	        				        			    
+		<?php endif; ?>
+			
+					
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>

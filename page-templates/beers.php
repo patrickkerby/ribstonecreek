@@ -46,7 +46,11 @@ get_header();
 			?>
 
 		</div>
-
+		
+		<div class="row d-flex align-items-center">
+			<a href="" class="btn btn-primary">View 'em all</a>
+		</div>
+		
 	</div> <!-- Row end -->
 
 </div><!-- Container end -->
