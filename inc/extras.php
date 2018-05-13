@@ -309,3 +309,14 @@ function taxonomy_slug_rewrite($wp_rewrite) {
     $wp_rewrite->rules = $rules + $wp_rewrite->rules;
 }
 add_filter('generate_rewrite_rules', 'taxonomy_slug_rewrite');
+
+// Populate GForm data for beer listing modal
+add_filter( 'gform_field_value_beername', 'populate_beername' );
+function populate_beername( $value ) {
+	
+	global $post;
+	
+	$title = get_the_title();
+	
+	return $title;      
+}
