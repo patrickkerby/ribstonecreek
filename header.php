@@ -121,11 +121,8 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 						<span class='close'>&times;</span>
 					</button>
 						
-					<div class='modal-dialog'>					
-						
-						<img src="<?php echo $image[0]; ?>" alt="Ribstone Creek Brewery" />
-
-						
+					<div class='modaldialog'>					
+						<img src="<?php echo $image[0]; ?>" alt="Ribstone Creek Brewery" />						
 						<?php wp_nav_menu(
 							array(
 								'theme_location'  => 'primary',
