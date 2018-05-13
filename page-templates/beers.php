@@ -15,7 +15,8 @@ get_header();
 	$tax_terms = get_terms( array(
 		'taxonomy' => 'beer-types',
 		'meta_key' => 'order_by',
-	    'orderby' => 'order_by'
+	    'orderby' => 'order_by',
+	    'exclude' => '37'
 	) );			
 ?>
 
@@ -48,7 +49,7 @@ get_header();
 		</div>
 		
 		<div class="row d-flex align-items-center">
-			<a href="" class="btn btn-primary">View 'em all</a>
+			<a href="all/" class="btn btn-primary">View 'em all</a>
 		</div>
 		
 	</div> <!-- Row end -->
