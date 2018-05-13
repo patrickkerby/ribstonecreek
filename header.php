@@ -75,6 +75,10 @@ $hero_taxonomy = get_field('background_image', $term);
 $overlay_taxonomy = get_field('overlay', $term);	
 $taxonomy_title = get_the_title( $term );
 
+//Theme custom logo
+$custom_logo_id = get_theme_mod( 'custom_logo' );
+$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
 ?>
 <div class="hfeed site" id="page">
 
@@ -104,11 +108,12 @@ $taxonomy_title = get_the_title( $term );
 
 
 <!-- ========== Begin NAV ============= -->				
-
+			<div class="sticky topbar">
+				<h1>Ribstone Creek Brewery</h1>
 				<button class="navbar-toggler pull-right" type="button" data-toggle="modal" data-target="#modalNavigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-	
+			</div>
 				<div class='modal fade modal-fullscreen-menu' id='modalNavigation' role='dialog' tabindex='-1'>
 					
 					<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
@@ -116,9 +121,11 @@ $taxonomy_title = get_the_title( $term );
 						<span class='close'>&times;</span>
 					</button>
 						
-					<div class='modal-dialog'>
-					
-						<!-- The WordPress Menu goes here -->
+					<div class='modal-dialog'>					
+						
+						<img src="<?php echo $image[0]; ?>" alt="Ribstone Creek Brewery" />
+
+						
 						<?php wp_nav_menu(
 							array(
 								'theme_location'  => 'primary',
@@ -127,9 +134,9 @@ $taxonomy_title = get_the_title( $term );
 								'menu_id'         => 'hamburger-menu',
 								'walker'          => new understrap_WP_Bootstrap_Navwalker(),
 							)
-						); ?>
-				
+						); ?>				
 					</div>
+					
 				</div>						
 
 				<?php wp_nav_menu(

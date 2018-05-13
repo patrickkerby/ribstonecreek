@@ -84,7 +84,37 @@ $max_head: 70vh;
 	transition: all 0.4s;
 }
 
+@mixin badgelogo() {
+	&.ribstonelogo {
+	order: 1;
+	background: #272C34;
+	height: 130px;
+	align-self: baseline;
+	left: 18px;
+	
+	a {
+		height: 130px;
+		width: 120px;
+		text-indent: -9999999px;
+		background: url('../img/RSC.svg') no-repeat center center;
+	}
+	
+	&:after {
+		content: "";
+		width: 0; 
+		height: 0; 
+		border-left: 60px solid transparent;
+		border-right: 60px solid transparent;
+		border-top: 15px solid #272C34;
+		position: absolute;
+		top: 100%;
+		left: 0;			
+	}
+}
+}
+
+
 $brand-primary: #F0C745; 
 $ribstone-gold: #F0C745;
-
-$primary:       $brand-primary !default;
+$primary: $brand-primary !default;
+$dark-blue: #2D333C;
