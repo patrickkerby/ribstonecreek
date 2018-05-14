@@ -320,3 +320,15 @@ function populate_beername( $value ) {
 	
 	return $title;      
 }
+
+/*
+// Make WordPress Retina Ready
+
+function jk_retina_script() {
+
+wp_enqueue_script('jk_retina', 'content_url();', null, '', true);
+
+}
+
+add_action( 'wp_head', 'jk_retina_script' );
+*/
