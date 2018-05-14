@@ -13,7 +13,6 @@ $container_type = get_field("container");
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>" class="row no-gutters">
-
 	<header class="entry-header lazy wow fadeIn col-lg-12" data-src="<?php echo $artwork; ?>" data-wow-duration="1s" style="background-image: url('<?php echo $artwork; ?>');"></header>
 
 	<div class="entry-content row justify-content-center no-gutters">
@@ -24,7 +23,6 @@ $container_type = get_field("container");
 
 		<div class="details col-md-6 col-sm-6 wow fadeIn" data-wow-duration="2.75s">
 			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-		
 			<div class="beer-meta" style="color: <?php echo $beer_colour; ?>;">
 				<span class="alc"><?php the_field('alc-vol'); ?>%</span>
 				<span class="ibu"><?php the_field('ibu'); ?> IBU</span>
@@ -43,6 +41,33 @@ $container_type = get_field("container");
 				<?php endwhile; ?>
 			</ul>
 			<?php endif; ?>
+
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-<?php echo($post->post_name); ?>">
+			  Where can I buy this beer?
+			</button>
+			
+			<!-- Modal -->
+			<div class="modal fade" id="modal-<?php echo($post->post_name); ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo($post->post_title); ?>" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title">I wanna get my hands on this!</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <?php
+				        gravity_form( 4, false, false, false, '', true );	
+					?>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
 			
 			<?php understrap_entry_footer(); ?>
 
