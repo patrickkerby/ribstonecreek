@@ -59,7 +59,7 @@ $container_type = get_field("container");
 			      </div>
 			      <div class="modal-body">
 			        <?php
-				        gravity_form( 4, false, false, false, '', true );	
+				        gravity_form( 'Beer Finder', false, false, false, '', true );	
 					?>
 			      </div>
 			      <div class="modal-footer">
