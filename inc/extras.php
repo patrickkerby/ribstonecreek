@@ -309,3 +309,26 @@ function taxonomy_slug_rewrite($wp_rewrite) {
     $wp_rewrite->rules = $rules + $wp_rewrite->rules;
 }
 add_filter('generate_rewrite_rules', 'taxonomy_slug_rewrite');
+
+// Populate GForm data for beer listing modal
+add_filter( 'gform_field_value_beername', 'populate_beername' );
+function populate_beername( $value ) {
+	
+	global $post;
+	
+	$title = get_the_title();
+	
+	return $title;      
+}
+
+/*
+// Make WordPress Retina Ready
+
+function jk_retina_script() {
+
+wp_enqueue_script('jk_retina', 'content_url();', null, '', true);
+
+}
+
+add_action( 'wp_head', 'jk_retina_script' );
+*/

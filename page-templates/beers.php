@@ -15,7 +15,8 @@ get_header();
 	$tax_terms = get_terms( array(
 		'taxonomy' => 'beer-types',
 		'meta_key' => 'order_by',
-	    'orderby' => 'order_by'
+	    'orderby' => 'order_by',
+	    'exclude' => '37'
 	) );			
 ?>
 
@@ -39,7 +40,7 @@ get_header();
 
 				$thumbnail = get_field('lineup_main_image', $tax_term);
 
-				echo '<div class="col-md-4 col-sm-6">' . '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . '<img src="' . $thumbnail . '" /><span>' . $tax_term->name.'</span></a></div>';			
+				echo '<div class="col-md-4 col-sm-6">' . '<a href="' . esc_attr(get_term_link($tax_term, 'beer-types')) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . '<img src="' . $thumbnail . '" /><span>' . $tax_term->name.'</span></a></div>';			
 	
 			}
 
@@ -48,7 +49,7 @@ get_header();
 		</div>
 		
 		<div class="row d-flex align-items-center">
-			<a href="" class="btn btn-primary">View 'em all</a>
+			<a href="all/" class="btn btn-primary">View 'em all</a>
 		</div>
 		
 	</div> <!-- Row end -->
