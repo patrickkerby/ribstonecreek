@@ -123,9 +123,11 @@ iframe {
 		@include fluid-type($min_width, $max_width, $min_font, $max_font);
 		display: inline-block;
 		padding: 0 3rem;
-		
+		@include media-breakpoint-down(sm) {
+			padding: 0;
+		}		
 		.single-product & {
-		@include fluid-type($min_width, $max_width, 40px, 110px);
+			@include fluid-type($min_width, $max_width, 40px, 110px);
 		}
 	}
 	.navbar-nav-rsc {
@@ -150,6 +152,7 @@ iframe {
 		li {
 			margin: 0 15px;
 			position: relative;
+			width: 100%;
 			
 			&.item:nth-of-type(n+5) {
 			  order: 2;
@@ -458,7 +461,7 @@ iframe {
 			margin: 0;
 			
 			li {
-				border: none;
+				border: none !important;
 			}
 		}
 		
