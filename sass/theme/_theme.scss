@@ -725,7 +725,8 @@ button:focus {
 	outline: none;
 }
 
-/* Forms */
+/* ------------------ Forms ------------------ */
+
 label.gfield_label, input[type="submit"] {
 	font: {
 		weight: 800;
@@ -823,7 +824,124 @@ footer .gform_wrapper {
     transition: all 1s ease;
 }	
 
-/* Parallax */
+/*** REMOVE LABEL ON FIELDS USING PLACEHOLDER ***/
+	.gfield { 
+		margin: 0 0 1.5rem 0;
+	}	
+		.field_sublabel_below label,
+		.field_description_below label {
+			display: none;
+		}
+		.checkboxes label {
+			display: inline-block;
+		}
+	
+	/*** FIELD STYLING ***/
+	input[type=text],
+	input[type=tel],
+	input[type=email],
+	select,
+	textarea {
+	 background: #F9D768; 
+	 border: none;
+	 border-radius: 0;
+	 color: #D6A509 !important;
+	 padding: 15px !important;
+	 width: 100%;
+	}
+
+	select {
+		height: 58px!important;
+	    border: none!important;
+	    border-radius: 0!important;
+	    text-indent: 6px;
+	}
+
+	/*** FIELD FOCUS STYLING ***/
+	input[type=text]:focus,
+	input[type=tel]:focus,
+	input[type=email]:focus,
+	input.text:focus,
+	input.title:focus,
+	textarea:focus {
+	    outline-style:none;
+		box-shadow:none;
+		border-color:transparent;
+		background: #FFE490;
+		box-shadow: 0 8px 14px 0 rgba(227,186,53,0.71);
+		@include slowfade();
+	}
+	
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: #D6A509;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+	  color: #D6A509;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+	  color: #D6A509;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	  color: #D6A509;
+	}	
+	
+	
+	/* Field Copy 2: */
+	
+	/*** MESSAGE BOX TRANSITION ***/
+	.gform_wrapper textarea.medium {
+	    margin-top: 6px;
+	    height: 10em;
+	    transition: height .3s ease-out;
+	}
+	/*** MESSAGE BOX FOCUS HEIGHT ***/
+	.gform_wrapper textarea.medium:focus {
+	    height: 15em;
+	}
+	/*** BUTTON STYLING ***/
+	.gform_wrapper .gform_footer input.button,
+	.gform_wrapper .gform_footer input[type=submit] {
+	    width: 100%;
+	}
+	.gform_wrapper input[type=submit] {
+	    cursor: pointer;
+	    text-transform: uppercase;
+	    font-weight: 700;
+	    letter-spacing: 2px;
+	    padding: 10px 12px;
+	    border-radius: 0;
+	    background: #E7B000;
+	    color: rgba(0, 0, 0, 0.5);
+	    border: none;
+	    transition: box-shadow .2s ease-in-out;
+	}
+	/*** BUTTON HOVER STYLING ***/
+	.gform_wrapper input[type=submit]:hover {
+	    background: #F1B700;
+	    color: #fff;
+		box-shadow: 0 8px 14px 0 rgba(227,186,53,0.71);
+	}
+
+
+
+// end current work
+
+// Modal
+.modal {
+	 background: rgba(240, 199, 69, 0.96);
+	 
+	 .modal-content {
+		 border: none;
+		 background: none;
+		 padding: 3rem 0;
+	 }
+	 .modal-header {
+		 border: none;
+	 }
+}
+
+
+/* ------------------ Parallax ------------------ */
 .paraxify,
 %paraxify {
 	background-attachment: fixed;
