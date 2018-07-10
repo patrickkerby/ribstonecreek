@@ -28,7 +28,7 @@ h3 {
 } 
 a {
 	&:link, &:active {
-	
+		color: inherit;
 	}
 	&a:hover {
 		color: $ribstone-gold;
@@ -237,7 +237,7 @@ iframe {
 					border: none;			
 		
 					a {
-						font:{
+						font: {
 							family: Venti;
 							size: 1.2rem;				
 							weight: 900;
@@ -261,7 +261,7 @@ iframe {
 	}
 	
 .navbar-dark {
-	background: $dark-blue;
+	background-color: $dark-blue;
 	
 	.navbar-toggler-icon {
 		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.75)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -367,6 +367,7 @@ iframe {
 		}	
 		img {
 			filter: drop-shadow(-53px 17px 57px rgba(0, 0, 0, 0.65));
+			transform: translateZ(0);
 			-webkit-transform: translateZ(0);
 		}	
 		&.bomber {
@@ -452,10 +453,6 @@ iframe {
 			background: none;
 			padding: 0;
 		}
-		form {
-			
-		}
-		
 		ul {
 			padding: 0;
 			margin: 0;
@@ -489,10 +486,17 @@ iframe {
 				@include slowfade();
 			}
 			img {
-				max-height: 200px;
+				max-height: 120px;
 				filter: drop-shadow(0 0 13px rgba(0, 0, 0, 0.18));
 				-webkit-transform: translateZ(0);			
 				@include slowfade();
+
+				&.Bottles {
+					max-height: 200px;
+				}
+				&.Tallboys {
+					max-height: 150px;	
+				}
 			}
 							
 			&:hover {
@@ -531,7 +535,7 @@ iframe {
 			align-items: center;			
 			text-align: center;
 			position: relative;
-			background:{
+			background: {
 				position: cover;
 				repeat: no-repeat;
 			}
@@ -555,11 +559,11 @@ iframe {
 			h3 {
 				padding: 0.75rem 2rem;
 				color: #fff;
-				font:{ 
+				font: { 
 					weight: 800;
 					size: 18px;
 				}
-				text:{
+				text: {
 					transform: uppercase;
 					align: center;
 				}
