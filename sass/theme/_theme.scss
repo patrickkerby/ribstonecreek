@@ -370,9 +370,13 @@ iframe {
 			transform: translateZ(0);
 			-webkit-transform: translateZ(0);
 		}	
+		&.tallboy {
+			margin-top: -200px;
+			padding: 25px; 
+		}
 		&.bomber {
-			margin-top: -300px;
-			padding: 15px;
+			margin-top: -400px;
+			padding: 25px; 
 		}
 	}	
 	.details {
@@ -445,7 +449,19 @@ iframe {
 			content: none;	
 		}
 	}
-	
+	button {
+		border: none;
+		color: #fff;
+		text-transform: uppercase;
+		letter-spacing: 0.05rem;
+		font-weight: 600;
+		padding: 1rem 2rem;
+		margin-top: 2rem;
+
+		&:hover {
+			color: rgba(255, 255, 255, 0.7);
+		}	
+	}
 	.modal {
 		
 		.gform_wrapper {

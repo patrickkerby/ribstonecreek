@@ -13,15 +13,15 @@ $container_type = get_field("container");
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>" class="row no-gutters">
-	<header class="entry-header lazy wow fadeIn col-lg-12" data-src="<?php echo $artwork; ?>" data-wow-duration="1s" style="background-image: url('<?php echo $artwork; ?>');"></header>
+	<header class="entry-header lazy wow fadeIn col-lg-12" data-src="<?php echo $artwork; ?>" data-wow-duration="0.5s" style="background-image: url('<?php echo $artwork; ?>');"></header>
 
 	<div class="entry-content row justify-content-center no-gutters">
 
 		<div class="can <?php echo $container_type; ?> col-md-3 col-sm-4 col-10">
-			<img data-src="<?php echo $can; ?>" src="<?php echo $can; ?>" class="lazy wow fadeIn" data-wow-duration="1.4s" /> 
+			<img data-src="<?php echo $can; ?>" src="<?php echo $can; ?>" class="lazy wow fadeIn" data-wow-duration="1s" /> 
 		</div>
 
-		<div class="details col-md-6 col-sm-6 wow fadeIn" data-wow-duration="2.75s">
+		<div class="details col-md-6 col-sm-6 wow fadeIn" data-wow-duration="1.75s">
 			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 			<div class="beer-meta" style="color: <?php echo $beer_colour; ?>;">
 				<span class="alc"><?php the_field('alc-vol'); ?>%</span>
@@ -43,7 +43,7 @@ $container_type = get_field("container");
 			<?php endif; ?>
 
 			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-<?php echo($post->post_name); ?>">
+			<button type="button" class="btn btn-primary" style="background: <?php echo $beer_colour; ?>;" data-toggle="modal" data-target="#modal-<?php echo($post->post_name); ?>">
 			  Where can I buy this beer?
 			</button>
 						
