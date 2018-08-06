@@ -39,8 +39,9 @@ get_header();
 			foreach ($tax_terms as $tax_term) {
 
 				$thumbnail = get_field('lineup_main_image', $tax_term);
+				$size = get_field('lineup_type', $tax_term);
 
-				echo '<div class="col-md-4 col-sm-6">' . '<a href="' . esc_attr(get_term_link($tax_term, 'beer-types')) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . '<img src="' . $thumbnail . '" /><span>' . $tax_term->name.'</span></a></div>';			
+				echo '<div class="col-md-4 col-sm-6">' . '<a href="' . esc_attr(get_term_link($tax_term, 'beer-types')) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . '<img class="' . $size . '" src="' . $thumbnail . '" /><span>' . $tax_term->name.'</span></a></div>';			
 	
 			}
 
