@@ -83,7 +83,8 @@ iframe {
 			display: none;
 		}
 	}
-	height: 85vh;
+	height: 55vh;
+	min-height: 550px;
 	background-size: cover;
 	background-position: center center;
 	display: flex;
@@ -91,11 +92,13 @@ iframe {
 	text-align: center;
 	flex-direction: column;
 	justify-content: center; 
-
+	
 	@include media-breakpoint-down(md) {
 		height: 85vh;
 	}
-	
+	@at-root body.home .navbar {
+		height: 85vh;
+	}
 	.single-product & {
 		height: 50vh; 
 	}
