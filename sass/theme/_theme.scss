@@ -77,6 +77,10 @@ iframe {
 .navbar {
 	@include media-breakpoint-up(md) {
 		background-attachment: fixed;
+		
+		@at-root body.archive .navbar {
+			background-attachment: inherit;
+		}
 	}
 	#navbarNavDropdown-rsc {	
 		@include media-breakpoint-down(sm) {
@@ -949,10 +953,6 @@ footer .gform_wrapper {
 		box-shadow: 0 8px 14px 0 rgba(227,186,53,0.71);
 	}
 }
-
-
-// end current work
-
 // Modal
 .modal {
 	 background: rgba(240, 199, 69, 0.96);
