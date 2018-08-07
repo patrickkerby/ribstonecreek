@@ -851,6 +851,7 @@ footer .gform_wrapper {
 }	
 
 /*** REMOVE LABEL ON FIELDS USING PLACEHOLDER ***/
+.modal {
 	.gfield { 
 		margin: 0 0 1.5rem 0;
 	}	
@@ -947,7 +948,7 @@ footer .gform_wrapper {
 	    color: #fff;
 		box-shadow: 0 8px 14px 0 rgba(227,186,53,0.71);
 	}
-
+}
 
 
 // end current work
