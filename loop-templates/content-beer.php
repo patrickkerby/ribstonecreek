@@ -58,7 +58,7 @@ $container_type = get_field("container");
 	  <div class="modal-dialog modal-dialog-centered" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title">I wanna get my hands on this!</h5>
+	        <h5 class="modal-title">Where can I buy <?php the_title(); ?>?</h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
@@ -67,9 +67,6 @@ $container_type = get_field("container");
 	        <?php
 		        gravity_form( 'Beer Finder', false, false, false, '', true );	
 			?>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 	      </div>
 	    </div>
 	  </div>
