@@ -28,7 +28,7 @@ h3 {
 } 
 a {
 	&:link, &:active {
-	
+		color: inherit;
 	}
 	&a:hover {
 		color: $ribstone-gold;
@@ -77,13 +77,18 @@ iframe {
 .navbar {
 	@include media-breakpoint-up(md) {
 		background-attachment: fixed;
+		
+		@at-root body.archive .navbar {
+			background-attachment: inherit;
+		}
 	}
 	#navbarNavDropdown-rsc {	
 		@include media-breakpoint-down(sm) {
 			display: none;
 		}
 	}
-	height: 85vh;
+	height: 55vh;
+	min-height: 550px;
 	background-size: cover;
 	background-position: center center;
 	display: flex;
@@ -91,11 +96,13 @@ iframe {
 	text-align: center;
 	flex-direction: column;
 	justify-content: center; 
-
+	
 	@include media-breakpoint-down(md) {
 		height: 85vh;
 	}
-	
+	@at-root body.home .navbar {
+		height: 85vh;
+	}
 	.single-product & {
 		height: 50vh; 
 	}
@@ -154,8 +161,13 @@ iframe {
 			position: relative;
 			width: 100%;
 			
-			&.item:nth-of-type(n+5) {
-			  order: 2;
+			&.item {
+				order: 1;
+				&:nth-of-type(n+1) { order: 3;} //Change these orders dending on number of menu items
+				&:nth-of-type(n+2) { order: 1;}
+				&:nth-of-type(n+3) { order: 2;}
+				&:nth-of-type(n+4) { order: 4;}
+				&:nth-of-type(n+5) { order: 5;}
 			}
 			@include badgelogo();
 			}
@@ -237,7 +249,7 @@ iframe {
 					border: none;			
 		
 					a {
-						font:{
+						font: {
 							family: Venti;
 							size: 1.2rem;				
 							weight: 900;
@@ -261,7 +273,7 @@ iframe {
 	}
 	
 .navbar-dark {
-	background: $dark-blue;
+	background-color: $dark-blue;
 	
 	.navbar-toggler-icon {
 		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.75)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -367,11 +379,16 @@ iframe {
 		}	
 		img {
 			filter: drop-shadow(-53px 17px 57px rgba(0, 0, 0, 0.65));
+			transform: translateZ(0);
 			-webkit-transform: translateZ(0);
 		}	
+		&.tallboy {
+			margin-top: -200px;
+			padding: 25px; 
+		}
 		&.bomber {
-			margin-top: -300px;
-			padding: 15px;
+			margin-top: -400px;
+			padding: 25px; 
 		}
 	}	
 	.details {
@@ -444,7 +461,19 @@ iframe {
 			content: none;	
 		}
 	}
-	
+	button {
+		border: none;
+		color: #fff;
+		text-transform: uppercase;
+		letter-spacing: 0.05rem;
+		font-weight: 600;
+		padding: 1rem 2rem;
+		margin-top: 2rem;
+
+		&:hover {
+			color: rgba(255, 255, 255, 0.7);
+		}	
+	}
 	.modal {
 		
 		.gform_wrapper {
@@ -452,10 +481,6 @@ iframe {
 			background: none;
 			padding: 0;
 		}
-		form {
-			
-		}
-		
 		ul {
 			padding: 0;
 			margin: 0;
@@ -467,9 +492,6 @@ iframe {
 		
 	}
 }
-
-
-
 
 .beergrid {
 	margin: 0 0 80px 0;
@@ -485,16 +507,24 @@ iframe {
 				@include systemlinks; 
 				color: #7F8894;
 				width: 100%;
-				display: inline-block;
+				display: inline-block; 
 				margin-top: 20px;
 				width: 100%;
 				padding: 0 15%;
 				@include slowfade();
 			}
 			img {
+				max-height: 120px;
 				filter: drop-shadow(0 0 13px rgba(0, 0, 0, 0.18));
 				-webkit-transform: translateZ(0);			
 				@include slowfade();
+
+				&.Bottles {
+					max-height: 200px;
+				}
+				&.Tallboys {
+					max-height: 150px;	
+				}
 			}
 							
 			&:hover {
@@ -533,7 +563,7 @@ iframe {
 			align-items: center;			
 			text-align: center;
 			position: relative;
-			background:{
+			background: {
 				position: cover;
 				repeat: no-repeat;
 			}
@@ -557,11 +587,11 @@ iframe {
 			h3 {
 				padding: 0.75rem 2rem;
 				color: #fff;
-				font:{ 
+				font: { 
 					weight: 800;
 					size: 18px;
 				}
-				text:{
+				text: {
 					transform: uppercase;
 					align: center;
 				}
@@ -825,6 +855,7 @@ footer .gform_wrapper {
 }	
 
 /*** REMOVE LABEL ON FIELDS USING PLACEHOLDER ***/
+.modal {
 	.gfield { 
 		margin: 0 0 1.5rem 0;
 	}	
@@ -921,11 +952,7 @@ footer .gform_wrapper {
 	    color: #fff;
 		box-shadow: 0 8px 14px 0 rgba(227,186,53,0.71);
 	}
-
-
-
-// end current work
-
+}
 // Modal
 .modal {
 	 background: rgba(240, 199, 69, 0.96);
