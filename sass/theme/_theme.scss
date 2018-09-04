@@ -129,7 +129,7 @@ iframe {
 		@include giantheader;
 		@include fluid-type($min_width, $max_width, $min_font, $max_font);
 		display: inline-block;
-		padding: 0 3rem;
+		padding: 3rem 3rem 0 3rem;
 		@include media-breakpoint-down(sm) {
 			padding: 0;
 		}		
