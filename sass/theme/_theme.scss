@@ -137,6 +137,13 @@ iframe {
 			@include fluid-type($min_width, $max_width, 40px, 110px);
 		}
 	}
+	.description p {
+		font-family: Venti;
+		color: #fff;
+		font-size: 20px;
+		text-transform: none;
+		margin: 2.5rem 0 0 0;
+	}
 	.navbar-nav-rsc {
 		width: 100vw;
 		position: absolute;

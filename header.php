@@ -163,7 +163,8 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 				<h1 class="page-title"><?php echo $shop_title; ?></h1>    	        				        			    
 
 			<?php elseif ( is_tax() ) : ?>
-				<h1 class="page-title"><?php echo $termname; ?></h1>    	        				        			    
+				<h1 class="page-title"><?php echo $termname; ?></h1> 
+				<div class="description"><?php echo term_description(); ?></div>   	        				        			    
 
 			<?php else : ?>
 				<h1 class="page-title"><?php the_title() ?></h1>    	        				        			    
