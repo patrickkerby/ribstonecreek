@@ -10,6 +10,7 @@ $artwork = get_field("artwork");
 $can = get_field("beer_can");
 $beer_colour = get_field("beer_colour");
 $container_type = get_field("container");
+$availability = get_field("availability");
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>" class="row no-gutters">
@@ -40,13 +41,22 @@ $container_type = get_field("container");
 					<li><?php echo $award; ?></li>
 				<?php endwhile; ?>
 			</ul>
-			<?php endif; ?>
+			<?php endif;
 
-			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-primary" style="background: <?php echo $beer_colour; ?>;" data-toggle="modal" data-target="#modal-<?php echo($post->post_name); ?>">
-			  Where can I buy this beer?
-			</button>
-						
+			// Don't show beer availability button if sold out
+			if( $availability === 'Sold Out' || $availability === 'Seasonal (Out of season)' ) {?>
+				<button type="button" class="btn btn-primary" style="background: <?php echo $beer_colour; ?>;" disabled>
+					Sorry, Sold Out!
+				</button>	
+			<?php }
+			else { ?>			
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" style="background: <?php echo $beer_colour; ?>;" data-toggle="modal" data-target="#modal-<?php echo($post->post_name); ?>">
+					Where can I buy this beer?
+				</button>
+			<?php
+			}	 ?>						
+
 			<?php understrap_entry_footer(); ?>
 
 		</div> <!-- .details -->
@@ -58,7 +68,7 @@ $container_type = get_field("container");
 	  <div class="modal-dialog modal-dialog-centered" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title">I wanna get my hands on this!</h5>
+	        <h5 class="modal-title">Where can I buy <?php the_title(); ?>?</h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
