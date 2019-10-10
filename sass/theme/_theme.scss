@@ -170,11 +170,13 @@ iframe {
 			
 			&.item {
 				order: 1;
-				&:nth-of-type(n+1) { order: 3;} //Change these orders dending on number of menu items
+				&:nth-of-type(n+1) { order: 4;} //Change these orders dending on number of menu items
 				&:nth-of-type(n+2) { order: 1;}
 				&:nth-of-type(n+3) { order: 2;}
-				&:nth-of-type(n+4) { order: 4;}
+				&:nth-of-type(n+4) { order: 3;}
 				&:nth-of-type(n+5) { order: 5;}
+				&:nth-of-type(n+6) { order: 6;}
+				&:nth-of-type(n+7) { order: 7;}
 			}
 			@include badgelogo();
 			}
