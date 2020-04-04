@@ -67,8 +67,13 @@ $hero_shop = get_field('background_image', get_option('woocommerce_shop_page_id'
 $overlay_shop = get_field('overlay', get_option('woocommerce_shop_page_id'));	
 $shop_title = get_the_title( get_option('woocommerce_shop_page_id') );
 
-$hero_product = get_field('shop_header_image', 'option');
-
+if( is_product() ):
+	global $product;
+	$product = wc_get_product();
+	$id = $product->get_id();
+	$hero_product = get_field('background_image', $id);
+	$overlay_product = get_field('overlay', $id);
+endif;
 $term = get_queried_object();
 $termname = $term->name;
 $hero_taxonomy = get_field('background_image', $term);
@@ -95,7 +100,7 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 		<?php elseif ( is_shop() ) : ?>
 			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay_shop; ?>), rgba(45,51,55,0.<?php echo $overlay_shop; ?>)), url('<?php echo $hero_shop; ?>');">
 		<?php elseif ( is_product() ) : ?>
-			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay_shop; ?>), rgba(45,51,55,0.<?php echo $overlay_shop; ?>)), url('<?php echo $hero_product; ?>');">
+			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay_product; ?>), rgba(45,51,55,0.<?php echo $overlay_product; ?>)), url('<?php echo $hero_product; ?>');">
 		<?php elseif ( is_tax() ) : ?>
 			<nav class="navbar navbar-expand-md navbar-dark" style="background-image: linear-gradient(rgba(45,51,55,0.<?php echo $overlay_taxonomy; ?>), rgba(45,51,55,0.<?php echo $overlay_taxonomy; ?>)), url('<?php echo $hero_taxonomy; ?>');">
 		<?php else : ?>
@@ -158,10 +163,22 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 
 			<?php elseif ( is_shop() ) : ?>
 				<h1 class="page-title"><?php echo $shop_title; ?></h1>    	        				        			    
-
+				<div class="product-nav">
+					<a class="cart-contents" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View cart' ); ?>">View Cart <span class="cart-qty"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
+				</div>
 			<?php elseif ( is_product() ) : ?>
-				<h1 class="page-title"><?php echo $shop_title; ?></h1>    	        				        			    
-
+				<h1 class="page-title"><?php echo $shop_title; ?></h1> 
+				<div class="product-nav">
+					<a href="/store">Back to Store</a>
+					<a class="cart-contents" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View cart' ); ?>">View Cart <span class="cart-qty"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
+				</div>
+			
+			<?php elseif ( is_cart() || is_checkout() ) : ?>
+				<h1 class="page-title"><?php the_title() ?></h1> 
+				<div class="product-nav">
+					<a href="/store">Forget anything? Back to Store.</a>
+				</div>
+			
 			<?php elseif ( is_tax() ) : ?>
 				<h1 class="page-title"><?php echo $termname; ?></h1> 
 				<div class="description"><?php echo term_description(); ?></div>   	        				        			    
