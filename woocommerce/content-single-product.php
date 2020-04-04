@@ -73,7 +73,7 @@ $delivery_notice = get_field('delivery_notice', 'option');
         ?>
 		<div class="details wow fadeIn" data-wow-duration="1.75s">
 			<div class="beer-meta" style="color: <?php echo $beer_colour; ?>;">
-				<span><?php the_field('badge'); ?></span>
+				<?php if (the_field('badge')): ?><span><?php the_field('badge'); ?></span><?php endif ?>
 				<span class="alc"><?php the_field('alc-vol'); ?>%</span>
 				<?php if($ibu): ?><span class="ibu"><?php echo($ibu); ?> IBU</span><?php endif; ?>
 				<span class="type"><?php the_field('beer_type'); ?></span>
