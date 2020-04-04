@@ -702,6 +702,24 @@ iframe {
 
 }
 /* WooCommerce */
+
+/* Archive */
+
+.badge {
+    position: absolute;
+    top: 4rem;
+    left: 5%;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    padding: 0 9px;
+    display: inline-flex;
+    line-height: 25px;
+    text-align: center;
+    margin: 0 auto !important;
+    width: 90%;
+}
+
 /* Product Single */
 
 .single-product {
@@ -831,7 +849,15 @@ iframe {
 			@include slowfade;
 		}
 	}
+	@include media-breakpoint-down(sm) {
+		flex-direction: column;
+
+		a {
+			margin: 1.5rem 0.4rem 0 0.4rem,;
+		}
+	}
 }
+
 
 /* Product photo gallery*/
 //Gallery
@@ -1025,6 +1051,7 @@ button:focus {
 /* ------------------ Forms ------------------ */
 form iframe {
 	height: auto;
+	width: 100% !important;
 }
 
 label.gfield_label, input[type="submit"] {
