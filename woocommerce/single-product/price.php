@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 $beer_colour = get_field('beer_colour');
+$pack_qty = get_field('pack-quantity');
 
 ?>
-<p style="color: <?php echo $beer_colour; ?>; class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
+<p style="color: <?php echo $beer_colour; ?>; class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?> - <span><?php echo($pack_qty); ?></span></p>
