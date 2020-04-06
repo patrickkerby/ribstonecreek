@@ -119,39 +119,34 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 					<span class="navbar-toggler-icon"></span>
 				</button>
 			</div>
-				<div class='modal fade modal-fullscreen-menu' id='modalNavigation' role='dialog' tabindex='-1'>
-					
-					<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
-				    	<span class='sr-only'>Close navigation</span>
-						<span class='close'>&times;</span>
-					</button>
-						
-					<div class='modaldialog'>					
-						<img src="<?php echo $image[0]; ?>" alt="Ribstone Creek Brewery" />						
-						<?php wp_nav_menu(
-							array(
-								'theme_location'  => 'primary',
-								'menu_class'      => 'navbar-nav',
-								'fallback_cb'     => '',
-								'menu_id'         => 'hamburger-menu',
-								'walker'          => new understrap_WP_Bootstrap_Navwalker(),
-							)
-						); ?>				
-					</div>
-					
-				</div>						
-
-				<?php wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => '',
-						'container_id'    => 'navbarNavDropdown-rsc',
-						'menu_class'      => 'navbar-nav-rsc',
-						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu',
-						'walker'          => new understrap_WP_Bootstrap_Navwalker(),
-					)
-				); ?>
+			<div class="modal" id="modalNavigation" role="dialog" tabindex="-1">				
+				<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+					<span class="close">&times;</span>
+				</button>					
+				<div class="modaldialog">					
+					<img src="<?php echo $image[0]; ?>" alt="Ribstone Creek Brewery" />						
+					<?php wp_nav_menu(
+						array(
+							'theme_location'  => 'primary',
+							'menu_class'      => 'navbar-nav',
+							'fallback_cb'     => '',
+							'menu_id'         => 'hamburger-menu',
+							'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+						)
+					); ?>				
+				</div>				
+			</div>						
+			<?php wp_nav_menu(
+				array(
+					'theme_location'  => 'primary',
+					'container_class' => '',
+					'container_id'    => 'navbarNavDropdown-rsc',
+					'menu_class'      => 'navbar-nav-rsc',
+					'fallback_cb'     => '',
+					'menu_id'         => 'main-menu',
+					'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+				)
+			); ?>
 				
 <!-- ========== END NAV ============= -->				
 

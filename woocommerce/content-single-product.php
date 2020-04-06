@@ -91,8 +91,9 @@ $delivery_notice = get_field('delivery_notice', 'option');
 			</ul>
 			<?php endif; ?>
 		</div>
-		<div class="delivery-notice details wow fadeIn" data-wow-duration="1.75s">
+		<div class="delivery-notice details wow fadeIn" id="delivery-notice" data-wow-duration="1.75s">
 				<?php echo($delivery_notice); ?>
+				<button class="close" id="close-notice">&times;</button>
 		</div>
 	</div>
 
@@ -123,4 +124,14 @@ $delivery_notice = get_field('delivery_notice', 'option');
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
 </div>
+<script>
+window.onload = () => {
+  // Get the button, and when the user clicks on it, execute myFunction
+  document.getElementById("close-notice").onclick = function() {myFunction()};
 
+  /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+  function myFunction() {
+    document.getElementById("delivery-notice").classList.toggle("hidden");
+  }
+}	
+</script>
