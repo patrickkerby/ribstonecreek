@@ -1332,3 +1332,10 @@ body {
 .hidden {
 	display: none !important;
 }
+.woocommerce-columns .col-1,
+.woocommerce-columns .col-2 {
+	width: 48% !important;
+}
+.woocommerce-page iframe {
+	padding: 0 !important;
+}
