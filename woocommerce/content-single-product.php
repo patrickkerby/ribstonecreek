@@ -40,6 +40,8 @@ $availability = get_field("availability");
 $beer_description = get_field("beer_description");
 $ibu = get_field('ibu');
 $delivery_notice = get_field('delivery_notice', 'option');
+$alc_vol = get_field('alc-vol');
+$beer_type = get_field('beer_type');
 
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
@@ -74,9 +76,9 @@ $delivery_notice = get_field('delivery_notice', 'option');
 		<div class="details wow fadeIn" data-wow-duration="1.75s">
 			<div class="beer-meta" style="color: <?php echo $beer_colour; ?>;">
 				<?php if (the_field('badge')): ?><span><?php the_field('badge'); ?></span><?php endif ?>
-				<span class="alc"><?php the_field('alc-vol'); ?>%</span>
+				<?php if ($alc_vol): ?><span class="alc"><?php the_field('alc-vol'); ?>%</span><?php endif ?>
 				<?php if($ibu): ?><span class="ibu"><?php echo($ibu); ?> IBU</span><?php endif; ?>
-				<span class="type"><?php the_field('beer_type'); ?></span>
+				<?php if($beer_type): ?><span class="type"><?php the_field('beer_type'); ?></span><?php endif; ?>
 			</div>
 
 			<?php the_field('beer_description'); ?>
