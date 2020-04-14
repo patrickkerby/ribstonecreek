@@ -332,3 +332,11 @@ wp_enqueue_script('jk_retina', 'content_url();', null, '', true);
 
 add_action( 'wp_head', 'jk_retina_script' );
 */
+
+function rsc_add_tip_to_store() {
+	$product_id = 1137;
+	$url = get_permalink( $product_id );
+	echo '<a class="tip btn" href="'.get_permalink($product_id).'">Click here to tip your driver! 100% of tips go directly to those involved getting your order to your door.</a>';
+}
+
+add_action( 'woocommerce_after_cart_table', 'rsc_add_tip_to_store' );
