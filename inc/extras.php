@@ -336,7 +336,20 @@ add_action( 'wp_head', 'jk_retina_script' );
 function rsc_add_tip_to_store() {
 	$product_id = 1137;
 	$url = get_permalink( $product_id );
-	echo '<a class="tip btn" href="'.get_permalink($product_id).'">Click here to tip your driver! 100% of tips go directly to those involved getting your order to your door.</a>';
-}
+	$in_cart = false;
 
+	foreach( WC()->cart->get_cart() as $cart_item ) {
+		$product_in_cart = $cart_item['product_id'];
+		if ( $product_in_cart === $product_id ) $in_cart = true;
+	 }
+	
+	 if ( $in_cart ) {
+	
+		// Don't show the tip product
+	
+	 }
+	else {
+		echo '<a class="tip btn" href="'.get_permalink($product_id).'">Click here to tip your driver! 100% of tips go directly to those involved getting your order to your door.</a>';
+	}
+}
 add_action( 'woocommerce_after_cart_table', 'rsc_add_tip_to_store' );
