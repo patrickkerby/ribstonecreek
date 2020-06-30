@@ -359,13 +359,21 @@ iframe {
 			text-align: center;
 		}		
 	}
+
 	a.btn {
 		color: #fff;
-		margin: 0 auto 80px auto;
+		margin: 1.5rem auto 2rem auto;
 		border-radius: 30px;
 		padding: 6px 50px;
-		
+		font-size: 18px;
 	}
+
+	a.beerFinder {
+		display: flex;
+		font-size: 18px;
+		text-decoration: underline;
+	}
+
 	article.beer {
 		padding-bottom: 100px;
 		

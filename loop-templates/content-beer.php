@@ -46,15 +46,15 @@ $availability = get_field("availability");
 			// Don't show beer availability button if sold out
 			if( $availability === 'Sold Out' || $availability === 'Seasonal (Out of season)' ) {?>
 				<button type="button" class="btn btn-primary" style="background: <?php echo $beer_colour; ?>;" disabled>
-					Sorry, Sold Out!
+					Sorry, Not available!
 				</button>	
 			<?php }
 			else { ?>			
 				<!-- Button trigger modal -->
-				<a href="/store" class="btn btn-primary" style="background: <?php echo $beer_colour; ?>;">
-					Order this beer online and get it delivered!
+				<a href="<?php the_field('product_link'); ?>" target="_blank" class="btn" style="background: <?php echo $beer_colour; ?>;">
+					Order for delivery! (Edmonton, Calgary, Wainwright)
 				</a>
-				<a href="#" data-toggle="modal" data-target="#modal-<?php echo($post->post_name); ?>">Or, find a location neer me that sells this beer</a>
+				<a class="beerFinder" href="#" data-toggle="modal" data-target="#modal-<?php echo($post->post_name); ?>" style="color: <?php echo $beer_colour; ?>">Or, find a location neer me that sells this beer</a>
 			<?php
 			}	 ?>						
 
