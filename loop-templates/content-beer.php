@@ -51,9 +51,10 @@ $availability = get_field("availability");
 			<?php }
 			else { ?>			
 				<!-- Button trigger modal -->
-				<button type="button" class="btn btn-primary" style="background: <?php echo $beer_colour; ?>;" data-toggle="modal" data-target="#modal-<?php echo($post->post_name); ?>">
-					Where can I buy this beer?
-				</button>
+				<a href="/store" class="btn btn-primary" style="background: <?php echo $beer_colour; ?>;">
+					Order this beer online and get it delivered!
+				</a>
+				<a href="#" data-toggle="modal" data-target="#modal-<?php echo($post->post_name); ?>">Or, find a location neer me that sells this beer</a>
 			<?php
 			}	 ?>						
 
