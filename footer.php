@@ -48,7 +48,23 @@ $footer_logo = get_field( 'footer_logo', 'option' );
 				</div><!-- .site-info -->
 	
 				<div class="site-info col-sm-4 col-xs-10">					
-					<?php gravity_form(2, false, false, false, '', true, 12); ?>
+					<!-- <?php gravity_form(2, false, false, false, '', true, 12); ?> -->
+					<!-- Begin Mailchimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+
+<div id="mc_embed_signup">
+<form action="https://ribstonecreekbrewery.us10.list-manage.com/subscribe/post?u=b37fcbb9a8b522a708b0ac9e9&amp;id=3daedac886" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<label for="mce-EMAIL">Be in the know! Sign up to our newsletter:</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b37fcbb9a8b522a708b0ac9e9_3daedac886" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
 				</div><!-- .site-info -->
 	
 			</footer><!-- #colophon -->
