@@ -1320,13 +1320,20 @@ footer .gform_wrapper {
 .site-footer #mc_embed_signup {
 	label {
 		color: #fff;
+		padding-bottom: 0;
 	}
 
 	input.email {
 		width: 75%;
 		border-radius: 0;
-		font-family: unset;
-		
+		font-family: unset;		
+	}
+
+	input.button {
+		background: none;
+		border-radius: 0;
+		border: solid 2px #ffffff;
+		text-transform: none;
 	}
 }
 
