@@ -352,4 +352,4 @@ function rsc_add_tip_to_store() {
 		echo '<a class="tip btn" href="'.get_permalink($product_id).'">Click here to tip your driver! 100% of tips go directly to those involved getting your order to your door.</a>';
 	}
 }
-add_action( 'woocommerce_after_cart_table', 'rsc_add_tip_to_store', 10, 0 );
+add_action( 'woocommerce_after_cart_contents', 'rsc_add_tip_to_store' );
