@@ -54,7 +54,7 @@ $availability = get_field("availability");
 				<a href="<?php the_field('product_link'); ?>" target="_blank" class="btn" style="background: <?php echo $beer_colour; ?>;">
 					Order for delivery! (Edmonton, Calgary, Wainwright)
 				</a>
-				<a class="beerFinder" href="#" data-toggle="modal" data-target="#modal-<?php echo($post->post_name); ?>" style="color: <?php echo $beer_colour; ?>">Or, find a location neer me that sells this beer</a>
+				<a class="beerFinder" href="#" data-toggle="modal" data-target="#modal-<?php echo($post->post_name); ?>" style="color: <?php echo $beer_colour; ?>">Or, find a location near me that sells this beer</a>
 			<?php
 			}	 ?>						
 
