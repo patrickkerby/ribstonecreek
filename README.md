@@ -11,8 +11,3 @@
 - Specific "Where to buy beer" contact form 
 - "Visit Us" page: Offerings about taproom, event hosting, party hosting (stags, birthdays, etc.) 
 
-*Next Steps:*
-- Moving to a new server: Can you assist us with this and provide recommendations and guidance? 
-- Timelines: Can you provide us with timelines? Maybe for phase 1 and then phase 2? 
-- Content: We understand we will provide the content. What is the best way to get the content to you or to organize the content to be uploaded. Any suggestions would be appreciated. 
-- If we buy ribstone.ca and ribstonecreek.ca just to own it, could we have it easily forwarded to the new page as well? ribstone.com is for sale...for a cool $2,100....
