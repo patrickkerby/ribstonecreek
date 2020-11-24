@@ -216,7 +216,7 @@ if ( ! isset( $email ) ) {
 							<?php } ?>
 
 							<p style="font-size: 12px; width: 250px; line-height: 15px; margin-top: 20px; padding-top: 20px;">
-								<br><br>This Gift Certificate is valid for online use only. Visit www.riverbendcsa.ca to redeem.
+								<br><br>This Gift Certificate is valid for online use only. Visit www.ribstonecreekbrewery.ca to redeem.
 							</p>
 							</a>
 						</div>

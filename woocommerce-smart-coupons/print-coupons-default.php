@@ -20,7 +20,7 @@ $bloginfo = get_bloginfo( 'name', 'display' );
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0">
-		<link rel="stylesheet" href="https://use.typekit.net/thb0pbt.css">
+		<link rel="stylesheet" href="https://use.typekit.net/nmx3ksc.css">
 
 		<title><?php echo $bloginfo;  // phpcs:ignore ?></title>
 		<?php wp_head(); ?>
@@ -39,10 +39,10 @@ $bloginfo = get_bloginfo( 'name', 'display' );
 			<table style="margin:30px 50px;">
 		<tr>
 			<td>
-				<img style="max-height: 440px; width: auto; margin-right: 30px;" src="https://riverbendcsa.ca/email/giftcertificate.jpg" alt="Riverbend Gardens, Edmonton Alberta" />
+				<img style="max-height: 440px; width: auto; margin-right: 30px;" src="https://ribstonecreekbrewery.ca/email/giftcertificate.jpg" alt="Ribstone Creek Brewery, Edmonton Alberta" />
 			</td>
 			<td>
-				<h1 style="font-family: shackleton-narrow, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif; color: #333333; font-size: 42px; line-height: 38px; padding-bottom: 20px;">Gift Certificate</h1>
+				<h1 style="font-family: bourbon, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif; color: #333333; font-size: 42px; line-height: 38px; padding-bottom: 20px;">Gift Certificate</h1>
 
 				
 			<?php
@@ -184,7 +184,7 @@ $bloginfo = get_bloginfo( 'name', 'display' );
 							<?php } ?>
 
 							<p style="font-size: 12px; width: 250px; line-height: 15px; margin-top: 20px; padding-top: 20px;">
-							<br><br>This Gift Certificate is valid for online use only. Visit www.riverbendcsa.ca to redeem.
+							<br><br>This Gift Certificate is valid for online use only. Visit www.ribstonecreekbrewery.ca to redeem.
 							</p>
 							</a>
 
