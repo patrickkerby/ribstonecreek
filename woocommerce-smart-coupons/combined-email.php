@@ -26,7 +26,7 @@ if ( ! isset( $email ) ) {
 		<link rel="stylesheet" href="https://use.typekit.net/thb0pbt.css">
 		<title><?php echo get_bloginfo( 'name', 'display' ); ?></title>
 		<style>
-		
+			@import url("https://use.typekit.net/nmx3ksc.css");
 		</style>
 	</head>
 	<body <?php echo is_rtl() ? 'rightmargin' : 'leftmargin'; ?>="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
@@ -53,7 +53,7 @@ if ( ! isset( $email ) ) {
 				<img style="max-height: 440px; width: auto;" src="https://ribstonecreekbrewery.ca/email/giftcertificate.jpg" alt="Ribstone Creek Brewery, Edmonton Alberta" />
 			</td>
 			<td>
-				<h1 class="" style="font-family: shackleton-narrow, serif; color: #333333; font-size: 42px; line-height: 38px; padding-bottom: 20px;">Gift Certificate</h1>
+				<h1 class="" style="font-family: bourbon, serif; color: #333333; font-size: 42px; line-height: 38px; padding-bottom: 20px;">Gift Certificate</h1>
 				<?php
 
 				if ( ! empty( $receiver_details ) ) {
