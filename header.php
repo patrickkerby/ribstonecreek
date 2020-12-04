@@ -74,6 +74,7 @@ if( is_product() ):
 	$hero_product = get_field('background_image', $id);
 	$overlay_product = get_field('overlay', $id);
 endif;
+
 $term = get_queried_object();
 $termname = $term->name;
 $hero_taxonomy = get_field('background_image', $term);
