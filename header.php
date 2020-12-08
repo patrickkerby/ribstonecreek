@@ -154,7 +154,7 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 
 			<?php if ($logo_choice) : ?>			
 				<img src="<?php echo( $logo ); ?>" />
-
+			<?php var_dump($logo_choice); ?>
 			<?php elseif ( is_front_page() ) : ?>
 				<div class="row justify-content-center">
 					<h1 class="page-title col-10 col-md-8 col-lg-7 col-xl-6"><?php the_title() ?></h1>  
