@@ -84,34 +84,80 @@ $max_font: 170px;
 	transition: all 0.4s;
 }
 
-@mixin badgelogo() {
-	&.ribstonelogo {
-	background: #272C34;
-	height: 130px;
-	align-self: baseline;
-	width: 120px;
-	
-	a {
-		height: 130px;
-		width: 120px;
-		text-indent: -9999999px;
-		background: url('../img/RSC.svg') no-repeat center center;
+	@mixin badgelogo() {
+		&.ribstonelogo {
+			background: #272C34;
+			height: 130px;
+			align-self: baseline;
+			width: 120px;
+			
+			a {
+				height: 130px;
+				width: 120px;
+				text-indent: -9999999px;
+				background: url('../img/RSC.svg') no-repeat center center;
+			}
+			
+			&:after {
+				content: "";
+				width: 0; 
+				height: 0; 
+				border-left: 60px solid transparent;
+				border-right: 60px solid transparent;
+				border-top: 15px solid #272C34;
+				position: absolute;
+				top: 100%;
+				left: 0;			
+			}
+		}
 	}
-	
-	&:after {
-		content: "";
-		width: 0; 
-		height: 0; 
-		border-left: 60px solid transparent;
-		border-right: 60px solid transparent;
-		border-top: 15px solid #272C34;
-		position: absolute;
-		top: 100%;
-		left: 0;			
-	}
-}
-}
 
+	@mixin logo() {
+		&.ribstonelogo {
+			background: #272C34;
+			height: 160px;
+			align-self: baseline;
+			width: 240px;
+			
+			a {
+				height: 170px;
+				width: 240px;
+				text-indent: -9999999px;
+				background: url('../img/rsc-logo-white.svg') no-repeat center center;
+				background-size: 80%;
+			}
+			
+			&:after {
+				content: "";
+				width: 0; 
+				height: 0; 
+				border-left: 120px solid transparent;
+				border-right: 120px solid transparent;
+				border-top: 30px solid #272C34;
+				position: absolute;
+				top: 100%;
+				left: 0;			
+			}
+		
+			@include media-breakpoint-down(md) {
+				width: 200px;
+				height: 140px;
+
+				a {
+					height: 150px;
+					width: 200px;
+					background-size: 80%;
+				}
+
+				&:after {
+					border-left: 100px solid transparent;
+					border-right: 100px solid transparent;
+					border-top: 30px solid #272C34;		
+				}
+			}
+		}
+		
+	}
 
 $brand-primary: #F0C745; 
 $ribstone-gold: #F0C745;

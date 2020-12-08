@@ -58,6 +58,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 $hero = get_field('background_image');
 $overlay = get_field('overlay');	
 $logo = get_field('logo');
+$logo_choice = get_field('logo_choice');
 
 $hero_news = get_field('background_image', get_option('page_for_posts'));
 $overlay_news = get_field('overlay', get_option('page_for_posts'));	
@@ -151,11 +152,13 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 				
 <!-- ========== END NAV ============= -->				
 
-			<?php if (!empty($logo)) : ?>			
+			<?php if ($logo_choice) : ?>			
 				<img src="<?php echo( $logo ); ?>" />
 
 			<?php elseif ( is_home() ) : ?>
-				<h1 class="page-title"><?php echo $news_title; ?></h1>    	        				        			    
+				<div class="row">
+					<h1 class="page-title col-7"><?php echo $news_title; ?></h1>    	        				        			    
+				</div>
 
 			<?php elseif ( is_shop() ) : ?>
 				<h1 class="page-title"><?php echo $shop_title; ?></h1>    	        				        			    
@@ -180,7 +183,12 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 				<div class="description"><?php echo term_description(); ?></div>   	        				        			    
 
 			<?php else : ?>
-				<h1 class="page-title"><?php the_title() ?></h1>    	        				        			    
+				<div class="row justify-content-center">
+					<h1 class="page-title col-10 col-md-8 col-lg-7 col-xl-6"><?php the_title() ?></h1>  
+					<div class="col-8">
+						<a href="https://ribstonecreekbrewery.ca/store" class="ghost">Order for home delivery!</a>
+					</div> 
+				</div>   
 		<?php endif; ?>
 			
 					

@@ -32,9 +32,13 @@ h3 {
 a {
 	&:link, &:active {
 		color: inherit;
+		@include slowfade();
 	}
-	&a:hover {
+
+	&:hover {
 		color: $ribstone-gold;
+		text-decoration: none;
+		@include slowfade();
 	}
 }
 
@@ -87,6 +91,26 @@ iframe {
 }
 
 // ----------- Navigation & Hero -
+.home nav .row a.ghost {
+	color: #fff;
+	display: inline-flex;
+	margin: 2rem auto;
+	border-color: #fff;
+	font-family: VentiCF-Black;
+	text-shadow: 0 0 12px rgba(0,0,0,0.53);
+	padding: 1rem 2rem 0.75rem 2rem;
+	line-height: 20px;
+
+	&:hover {
+		background: #272C34;
+		border-color: #272C34;
+		@include slowfade();
+	}
+
+	@include media-breakpoint-down(sm) {
+		font-size: 16px;
+	}
+}
 
 .navbar {
 	@include media-breakpoint-up(md) {
@@ -114,11 +138,11 @@ iframe {
 	}
 	
 	@include media-breakpoint-down(md) {
-		height: 85vh;
+		height: 80vh;
 	}
 
 	@at-root body.home .navbar {
-		height: 85vh;
+		height: 80vh;
 	}
 
 	.single-product & {
@@ -150,18 +174,45 @@ iframe {
 		display: inline;
 		margin: 0;
 	}
+
 	.page-title {
 		@include giantheader;
+		
 		@include fluid-type($min_width, $max_width, $min_font, $max_font);
+		
 		display: inline-block;
 		padding: 3rem 3rem 0 3rem;
+
 		@include media-breakpoint-down(sm) {
 			padding: 0;
-		}		
+		}
+
 		.single-product & {
 			@include fluid-type($min_width, $max_width, 70px, 180px);
 		}
+
+		.home & {
+			@include fluid-type($min_width, $max_width, 60px, 110px);
+			line-height: 80px;
+			text-shadow: 0 0 16px rgba(0,0,0,0.59);
+			padding: 0;
+			margin-top: 100px;
+
+			@include media-breakpoint-up(lg) {
+				line-height: 90px;
+			}
+
+			@include media-breakpoint-down(md) {
+				line-height: 76px;
+			}
+			
+			@include media-breakpoint-down(sm) {
+				line-height: 68px;
+				margin-top: 50px;
+			}
+		}
 	}
+
 	.description p {
 		font-family: Venti;
 		color: #fff;
@@ -174,7 +225,7 @@ iframe {
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 44px;
+		height: 74px;
 		display: flex; 
 		justify-content: space-around;
 		align-items: center;
@@ -185,7 +236,7 @@ iframe {
 		@include slowfade();
 
 		@include media-breakpoint-down(lg) {
-			height: 64px;
+			height: 74px;
 		}
 		
 		li {
@@ -203,7 +254,9 @@ iframe {
 				&:nth-of-type(n+6) { order: 6;}
 				&:nth-of-type(n+7) { order: 7;}
 			}
-			@include badgelogo();
+			// @include badgelogo();
+			@include logo();
+			
 			}
 			&.contact {
 				a {
@@ -647,6 +700,11 @@ iframe {
 		padding: 3rem 3rem 5rem 3rem;
 	  background: url(../img/divider.svg) no-repeat bottom center;
 
+		@include media-breakpoint-down(sm) {
+			padding: 3rem 1rem 4rem 1rem;
+			background-size: 80%;
+		}
+
 		h3 {
 			font-size: 38px;
 		}
@@ -654,24 +712,57 @@ iframe {
 		h4 {
 			color: #7F8894;
 			padding-top: 0.5rem;
+			
+			@include media-breakpoint-down(md) {
+				margin-bottom: 1.5rem;
+			}
 		}
 
 		div:nth-child(2) {
 			margin-top: -4.5rem;
+
+			@include media-breakpoint-down(md) {
+				margin-top: 0;
+			}
 		}
 	}
 
 	.promo {
-		padding: 7rem 3rem;
-		text-align: left;
+		padding: 4rem 0 7rem 0;
+		text-align: center;
+
+		@include media-breakpoint-up(sm) {
+			text-align: left;
+		}
 
 		img {
-			position: relative;
-			right: -150px
+			width: calc(100% + 100px);
+			// margin-left: -50px;
+			max-width: unset;
+			// width: 50%;
+			
+			@include media-breakpoint-down(sm) {
+				display: flex;
+				width: 85%;
+				margin: 0 auto 0 auto;
+			}
+		}
+
+		.tallboy img {
+			@include media-breakpoint-down(sm) {
+				display: flex;
+				width: 85%;
+				margin: 0 auto 0 auto;			
+			}
 		}
 
 		h2 {
 			padding-bottom: 0;
+
+			@include media-breakpoint-down(md) {
+				font-size: 50px;
+				line-height: 52px;
+			}
 		}
 
 		.meta {
@@ -679,37 +770,137 @@ iframe {
 		}
 
 		p {
-			padding-right: 10rem;
+			padding-right: 8rem;
 			margin: 2rem 0;
+
+			@include media-breakpoint-down(lg) {
+				padding-right: 6rem;
+			}
+			
+			@include media-breakpoint-down(md) {
+				padding-right: 3rem;
+				font-size: 20px;
+				line-height: 24px;
+				margin: 1rem 0 2rem 0;
+			}
+
+			@include media-breakpoint-down(sm) {
+				padding-right: 0;
+			}
 		}
+
+		.carousel-item {
+			padding-bottom: 1rem;
+		}
+
+		.carousel-control-next-icon {
+			background: url(../img/arrow-right.svg) no-repeat center center;
+			width: 25px;
+			height: 38px;
+			margin-right: -2rem;
+			
+			@include media-breakpoint-down(sm) {
+				background-size: 60%;
+				margin-right: -3rem;
+			}
+		}
+
+		.carousel-control-prev-icon {
+			background: url(../img/arrow-left.svg) no-repeat center center;
+			width: 25px;
+			height: 38px;
+			margin-left: -2rem;
+
+			@include media-breakpoint-down(sm) {
+				background-size: 60%;
+				margin-left: -3rem;
+			}
+		}
+
+		//Flexslider styles
+		
+		ol.carousel-indicators {
+			bottom: -4rem;
+			z-index: 6;
+
+			li {
+				height: 14px;
+				width: 14px;
+				border: solid 3px #cecece;
+				border-radius: 10px;
+				margin: 0.3rem;
+				position: relative;
+
+				&.active::after {
+					content: "";
+					width: 8px;
+					height: 8px;
+					background: #5a5a5a;
+					position: absolute;
+					z-index: 11;
+					top: 3px;
+					left: 3px;
+					border-radius: 100%;
+				}
+			}
+		}
+
 	}
 
 	.features {
 	  background: url(../img/divider.svg) no-repeat bottom center;
 		padding: 5rem 15px;
+		align-items: flex-start;
+
+		@include media-breakpoint-down(sm) {
+			background-size: 80%;
+		}
 
 		div div {
 			background: #fff;
 			padding: 1.5rem 2rem;
-			z-index: 2;
+			z-index: 0;
 			position: relative;
 			margin: -5rem auto 0 auto;
 			width: 75%;
+
+			@include media-breakpoint-down(md) {
+				padding: 0.5rem 0.5rem;
+			}
+			
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 2rem;
+			}
 		}
 		
 		h3 {
 			font-size: 77px;
 			line-height: 74px;
 			margin-bottom: 1rem;
+
+			@include media-breakpoint-down(md) {
+				font-size: 65px;
+				line-height: 60px;
+			}
 		}
 	}
 
 	.visit {
 	  background: url(../img/divider.svg) no-repeat bottom center;
-		padding: 5rem 4rem 5rem 4rem;
+		padding: 7rem 4rem 5rem 4rem;
+
+		@include media-breakpoint-down(sm) {
+			padding: 5rem 1rem 4rem 1rem;
+			background-size: 80%;
+		}
 
 		h2 {
 			margin-bottom: 1rem;
+			font-size: 76px;
+
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 3rem;
+			}
 		}
 
 		div {
@@ -718,6 +909,11 @@ iframe {
 
 		.map {
 			padding: 3rem;
+
+			@include media-breakpoint-down(md) {
+				padding: 0;
+				margin-bottom: 3rem;
+			}
 		}
 
 		p {
@@ -732,6 +928,27 @@ iframe {
 
 		.ghost {
 			display: inline-flex;
+			font-family: FontAwesome;			
+			padding: 0.5rem 0.75rem;
+			align-items: center;
+
+			&.email {
+				font-size: 15px;
+				position: relative;
+				top: -2px;
+			}
+
+			span {
+				font-family: $font-family-sans-serif;
+				font-size: 17px;
+				margin-left: 0.5rem;
+				height: 20px;
+			}
+
+			&:hover {
+				color: #fff;
+				background: #333
+			}
 		}
 	}
 
@@ -748,6 +965,10 @@ iframe {
 		div.row {
 			margin-top: -4rem;
 			width: 100%;
+
+			@include media-breakpoint-down(sm) {
+				margin-top: 3rem;
+			}
 		}
 
 		div div {
@@ -764,6 +985,8 @@ iframe {
 			align-self: flex-end;
 			align-items: center;
 			justify-content: center;
+			background-position: center;
+			background-size: cover;
 
 			h3 {
 				color: #fff;
@@ -783,6 +1006,10 @@ iframe {
 
 		.tall a.story {
 			min-height: 410px;
+
+			@include media-breakpoint-down(sm) {
+				min-height: 300px;
+			}
 		}
 
 		div.title {
@@ -1192,56 +1419,165 @@ section.gallery {
 
 /* Footer Style */
 #wrapper-footer {
-	background-size: cover;
-	background-position: center center;
-    -webkit-box-shadow: inset 0 40px 40px -40px rgba(0,0,0,0.3);
-    -moz-box-shadow: inset  0 40px 40px -40px rgba(0,0,0,0.3);
-    box-shadow: inset  0 40px 40px -40px rgba(0,0,0,0.3);
-	
-	h4, h5, p, address, label {
+	background: #2D333C;
+	// padding-bottom: 6rem;
+
+	div.contact {
+		padding: 0 3rem;
+		
+		div {
+			margin-bottom: 2rem;
+
+			@include media-breakpoint-down(md) {
+				text-align: center;
+				border: none !important;
+			}
+		}
+
+		@include media-breakpoint-down(md) {
+			padding: 0 1rem;
+
+		}
+		@include media-breakpoint-down(sm) {
+			width: 90%;
+			margin: 0 auto;
+			padding: 0;
+		}
+	}
+
+	h3, h4, h5, p, address, label {
 		font: {
 			family: Venti;
 			size: 16px;
 			weight: 700;
 		}
 		line-height: 21px;
-	}
-
-	h3, h4, h5, h6 {
-		color: #818181;
-	} 
-
-	p, address {
 		color: #fff;
 	}
+
+	h3 {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 19px;
+		font-weight: 800;
+	}
+
+	p {
+		margin-bottom: 0.25rem;
+
+		strong {
+			text-transform: uppercase;
+    	font-size: 17px;
+			font-weight: 900;
+			padding-top: 1rem;
+			display: inline-flex;
+		}
+	}
+
+	img {
+		display: flex;
+		margin: 75px auto;
+	}
+
+	.contact img {
+		margin: 0 auto auto auto;
+	}
 	
-	.site-info {
-		padding-top: 3rem;
-		padding-bottom: 3rem;
-		
-		@include media-breakpoint-down(sm) {
-			text-align: center;
-			
-			footer .gform_wrapper {
-				margin: 0 3rem;	
-			}
-		}
-		
-		img {
-			display: flex;
-			margin: 0 auto;
-		}
-		
-		.connect a {
+	.connect {
+		border: none !important;
+		margin-bottom: 0;
+
+		a {
 			font-family: FontAwesome;
 			color: #fff;
 			font-size: 18px;
-			margin: 0 15px 0 0;
+			margin: 0.25rem;
+			border: solid 3px #fff;
+			padding: 0 0.5rem;
+			width: 40px;
+			display: inline-flex;
+			justify-content: center;
 			transition: all 0.5s ease;
 			
 			&:hover {
 				text-decoration: none;
 				color: #666;
+			}
+		}
+	}
+
+	a.email {
+		color: #fff;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 900;
+		margin-bottom: 0.5rem;
+		margin-top: 0.65rem;
+		display: flex;
+		
+		@include media-breakpoint-down(md) {
+			justify-content: center;
+		}
+				
+		span {
+			font-family: FontAwesome;
+			margin-right: 0.75rem;
+			font-size: 15px;
+		}
+	}
+
+	form {
+		display: flex;
+		justify-content: center;
+		margin: 1rem 0 9rem 0;
+
+		@include media-breakpoint-down(md) {
+			margin: 1rem 0 7rem 0;
+		}
+		
+		@include media-breakpoint-down(sm) {
+			margin: 1rem 0 3rem 0;
+		}
+
+		div {
+			display: flex;
+
+			&#mc_embed_signup_scroll {
+				width: 70%;
+
+				@include media-breakpoint-down(lg) {
+					width: 80%;
+				}
+
+				@include media-breakpoint-down(md) {
+					width: 92%;
+				}
+			}
+
+			input {
+				display: inline-flex;
+				width: 100%;
+				margin: 0.5rem 0.75rem !important;
+				padding: 0 0.75rem;
+				background: #4A525E;
+				border: none;
+				border-radius: 4px;
+				height: 50px;
+				color: #fff;
+				font-size: 16px;
+				font-weight: 800;
+				text-transform: uppercase;
+
+				&::placeholder {
+					color: #fff;
+				}
+
+				&[type=submit] {
+					background: none;
+					border: solid 4px #fff;
+					border-radius: 0;
+					text-align: center;
+				}
 			}
 		}
 	}
