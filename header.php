@@ -152,7 +152,7 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 				
 <!-- ========== END NAV ============= -->				
 
-			<?php if ($logo_choice == true) : ?>			
+			<?php if ($logo_choice === true) : ?>			
 				<img src="<?php echo( $logo ); ?>" />
 
 			<?php elseif ( is_front_page() ) : ?>
@@ -162,8 +162,10 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 						<a href="https://ribstonecreekbrewery.ca/store" class="ghost">Order for home delivery!</a>
 					</div>
 				</div>
+				<?php endif; ?>
 
-			<?php elseif ( is_shop() ) : ?>
+
+			<?php if ( is_shop() ) : ?>
 				<h1 class="page-title"><?php echo $shop_title; ?></h1>    	        				        			    
 				<div class="product-nav">
 					<a class="cart-contents" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View cart' ); ?>">View Cart <span class="cart-qty"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
