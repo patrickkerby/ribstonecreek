@@ -152,12 +152,15 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 				
 <!-- ========== END NAV ============= -->				
 
-			<?php if ($logo_choice) : ?>			
+			<?php if ($logo_choice == true) : ?>			
 				<img src="<?php echo( $logo ); ?>" />
 
-			<?php elseif ( is_home() ) : ?>
-				<div class="row">
-					<h1 class="page-title col-7"><?php echo $news_title; ?></h1>    	        				        			    
+			<?php elseif ( is_front_page() ) : ?>
+				<div class="row justify-content-center">
+					<h1 class="page-title col-10 col-md-8 col-lg-7 col-xl-6"><?php the_title() ?></h1>  
+					<div class="col-8">
+						<a href="https://ribstonecreekbrewery.ca/store" class="ghost">Order for home delivery!</a>
+					</div>
 				</div>
 
 			<?php elseif ( is_shop() ) : ?>
@@ -184,10 +187,7 @@ $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 
 			<?php else : ?>
 				<div class="row justify-content-center">
-					<h1 class="page-title col-10 col-md-8 col-lg-7 col-xl-6"><?php the_title() ?></h1>  
-					<div class="col-8">
-						<a href="https://ribstonecreekbrewery.ca/store" class="ghost">Order for home delivery!</a>
-					</div> 
+					<h1 class="page-title col-12"><?php the_title() ?></h1>  				
 				</div>   
 		<?php endif; ?>
 			
