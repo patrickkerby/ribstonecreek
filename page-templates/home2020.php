@@ -31,7 +31,7 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
       </div>
       <div class="col-md-4">
         <h3><?php echo $brewing; ?> years brewing</h3>
-        <h4>Still kickin'</h4>
+        <h4>Doing what we love!</h4>
       </div>
       <div class="col-md-4">
         <h3>Award Winning Beers</h3>
