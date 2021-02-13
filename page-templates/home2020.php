@@ -196,7 +196,7 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
       </div>
       <div class="row no-gutters">
         <div class="col-sm-6 col-md-3 tall">
-          <a href="https://stories.ribstonecreekbrewery.ca/pare-family" target="_blank" class="story" style="background-image: url(/app/themes/ribstonecreek/img/stories/pare.jpg);">
+          <a href="https://stories.ribstonecreekbrewery.ca/pare-family" target="_blank" class="story" style="background-image: url('https://www.ribstonecreekbrewery.ca/app/themes/ribstonecreek/img/stories/pare.jpg');">
             <div class="title">
               <h3>Paré Family</h3>
               <h4>Stories from Edgerton</h4>
@@ -204,7 +204,7 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
           </a>
         </div>
         <div class="col-sm-6 col-md-3">
-          <a href="https://stories.ribstonecreekbrewery.ca/jim" target="_blank" class="story" style="background-image: url(/app/themes/ribstonecreek/img/stories/jim.jpg);">
+          <a href="https://stories.ribstonecreekbrewery.ca/jim" target="_blank" class="story" style="background-image: url('https://www.ribstonecreekbrewery.ca/app/themes/ribstonecreek/img/stories/jim.jpg');">
             <div class="title">
               <h3>Jim</h3>
               <h4>A day in the life of small town farming</h4>
@@ -212,7 +212,7 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
           </a>
         </div>
         <div class="col-sm-6 col-md-3">
-          <a href="https://stories.ribstonecreekbrewery.ca/lenny" target="_blank" class="story" style="background-image: url(/app/themes/ribstonecreek/img/stories/lenny.jpg);">
+          <a href="https://stories.ribstonecreekbrewery.ca/lenny" target="_blank" class="story" style="background-image: url('https://www.ribstonecreekbrewery.ca/app/themes/ribstonecreek/img/stories/lenny.jpg');">
             <div class="title">
               <h3>Lenny</h3>
               <h4>Local hardware store is a staple in any small town.</h4>
@@ -220,7 +220,7 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
           </a>
         </div>
         <div class="col-sm-6 col-md-3 tall">
-          <a href="https://stories.ribstonecreekbrewery.ca/wanda" target="_blank" class="story" style="background-image: url(/app/themes/ribstonecreek/img/stories/wanda.jpg);">
+          <a href="https://stories.ribstonecreekbrewery.ca/wanda" target="_blank" class="story" style="background-image: url('https://www.ribstonecreekbrewery.ca/app/themes/ribstonecreek/img/stories/wanda.jpg');">
             <div class="title">
               <h3>Wanda</h3>
               <h4>Owner of the Oasis Hotel</h4>
