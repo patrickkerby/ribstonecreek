@@ -188,6 +188,26 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
         <a href="https://twitter.com/RibstoneCreek" target="_blank" class="ghost">&#xf099;</a>
         <a href="https://www.instagram.com/ribstonecreek/" target="_blank" class="ghost">&#xf16d;</a>  
       </div>
+      <div class="col-sm-12 videopromo justify-content-center">
+        <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/oIIlJlmriKM">
+          <h3>Welcome to <span>(play video)</span> the Brewery</h3>
+        </a>
+        <img src="app/themes/ribstonecreek/img/video-bg.jpg" alt="" />
+      </div>
+      <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="auto" src="" allowfullscreen></iframe>
+            </div>            
+          </div>
+        </div>
+      </div>
     </section>
     <section class="stories row no-gutters justify-content-center lazy">
       <div class="col-sm-6">
