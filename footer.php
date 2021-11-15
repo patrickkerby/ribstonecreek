@@ -66,8 +66,8 @@ $footer_logo = get_field( 'footer_logo', 'option' );
 						<img width="99px" src="/app/themes/ribstonecreek/img/rsc-logo-badge.png" alt="Ribstone Creek Brewery" />
 					</div>
 					<div class="col-sm-4 col-md">
-						<p><strong>Taproom:</strong></p>
-						<p>Fridays: 3 - 7pm<br >Saturdays 11 - 6pm</p>
+						<p><strong><?php echo $hours_title; ?></strong></p>
+						<p><?php echo $hours; ?></p>
 					</div>
 					<div class="col-sm-6 col-md">
 						<a href="/contact" class="email"><span>&#xf1d8;</span> Email</a>
