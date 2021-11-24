@@ -209,7 +209,7 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
         </div>
       </div>
     </section>
-    <section class="stories row no-gutters justify-content-center lazy">
+    <!-- section class="stories row no-gutters justify-content-center lazy">
       <div class="col-sm-6">
         <h2>Stories from <br>Edgerton</h2>
         <h4>Our Small Town Living Community</h4>
@@ -249,7 +249,7 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
         </div>
       </div>
     </section>
-	</div><!-- Container end -->
+	</div --><!-- Container end -->
 
 </div><!-- Wrapper end -->
 
