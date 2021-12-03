@@ -60,7 +60,7 @@ $footer_logo = get_field( 'footer_logo', 'option' );
 					</div>
 					<div class="col-sm-4 col-md">
 						<p><strong>Direct Delivery</strong></p>
-						<p>Thursdays: 11am - 7pm <br>(Edmonton, Calgary, Wainwright)</p>
+						<p>Thursdays: 11am - 7pm <br>(Edmonton, Calgary)</p>
 					</div>
 					<div class="d-none d-md-flex col-md">
 						<img width="99px" src="/app/themes/ribstonecreek/img/rsc-logo-badge.png" alt="Ribstone Creek Brewery" />
