@@ -55,12 +55,13 @@ $footer_logo = get_field( 'footer_logo', 'option' );
 			<!-- Contant and address info -->
 			<div class="row justify-content-center no-gutters contact">
 					<div class="col-sm-4 col-md">
-						<p><strong>(780) 755-3008</strong></p>
-						<p>4924 51 Street, <br>Edgerton, AB, T0B 1K0</p>
+						<!-- p><strong>(780) 755-3008</strong></p>
+						<p>4924 51 Street, <br>Edgerton, AB, T0B 1K0</p -->
+						<p>We're moving to Lloydminster! Details coming soon.</p>
 					</div>
 					<div class="col-sm-4 col-md">
 						<p><strong>Direct Delivery</strong></p>
-						<p>Thursdays: 11am - 7pm <br>(Edmonton, Calgary)</p>
+						<p>Coming Soon</p>
 					</div>
 					<div class="d-none d-md-flex col-md">
 						<img width="99px" src="/app/themes/ribstonecreek/img/rsc-logo-badge.png" alt="Ribstone Creek Brewery" />

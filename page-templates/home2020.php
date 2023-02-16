@@ -172,15 +172,14 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
       </div>
     </section>
     <section class="visit row lazy justify-content-center">
-      <h2 class="col-md-12">Come Visit!</h2>
+      <h2 class="col-md-12">We're moving!</h2>
       <div class="col-sm-8 col-md-7 map">
         <img width="630px" src="app/themes/ribstonecreek/img/map.png" alt="" />
       </div>
       <div class="col-sm-9 col-md-5">
-        <p><strong>We’re pretty friendly over here</strong></p>
-        <p>We’re a few hours from Edmonton, a bit further from Calgary, kind of the same from Medicine Hat, and a decent roadtrip from Lethbridge. </p>
-        <p>Come out and see the beauty of Eastern Alberta, take a tour, have a bite to eat and some pints in the taproom.</p>
-        <p>You can usually find some taproom exclusive beers, along with merch and glassware you can’t find anywhere else.</p>
+        <p><strong>There will be many updates soon, so stay tuned.</strong></p>
+        <p>After 11 years in Edgerton, we're moving (but not far!). You'll be able to visit us soon in Lloydminster.</p>
+        <p>Follow us on social media, and check back often. Good things coming!</p>
         <br />
         <p><strong>Questions? Send us a message:</strong></p>
         <a href="/contact" class="email ghost">&#xf1d8; <span>Email</span></a>
