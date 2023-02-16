@@ -57,7 +57,8 @@ $footer_logo = get_field( 'footer_logo', 'option' );
 					<div class="col-sm-4 col-md">
 						<!-- p><strong>(780) 755-3008</strong></p>
 						<p>4924 51 Street, <br>Edgerton, AB, T0B 1K0</p -->
-						<p>We're moving to Lloydminster! Details coming soon.</p>
+						<p>We're moving to Lloydminster!</p>
+						<p>Details coming soon.</p>
 					</div>
 					<div class="col-sm-4 col-md">
 						<p><strong>Direct Delivery</strong></p>
