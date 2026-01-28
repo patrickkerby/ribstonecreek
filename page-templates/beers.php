@@ -16,7 +16,7 @@ get_header();
 		'taxonomy' => 'beer-types',
 		'meta_key' => 'order_by',
 	    'orderby' => 'order_by',
-	    'exclude' => '37, 32' //@TODO: have ACF field grid_hide set these exclusions
+	    'exclude' => '37, 32, 29' //@TODO: have ACF field grid_hide set these exclusions
 	) );			
 ?>
 
