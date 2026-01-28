@@ -54,7 +54,7 @@ $availability = get_field("availability");
 				<a href="https://4thmeridianbrewing.com/shop/" target="_blank" class="btn" style="background: <?php echo $beer_colour; ?>;">
 					Order for delivery!
 				</a>
-				<!-- <a class="beerFinder" href="#" data-toggle="modal" data-target="#modal-<?php echo($post->post_name); ?>" style="color: <?php echo $beer_colour; ?>">Or, find a location near me that sells this beer</a> -->
+				<a class="beerFinder" href="#" data-toggle="modal" data-target="#modal-<?php echo($post->post_name); ?>" style="color: <?php echo $beer_colour; ?>">Or, find a location near me that sells this beer</a>
 			<?php
 			}	 ?>						
 
@@ -65,7 +65,7 @@ $availability = get_field("availability");
 	</div><!-- .entry-content .row -->
 
 	<!-- Modal -->
-	<!-- <div class="modal fade" id="modal-<?php echo($post->post_name); ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo($post->post_title); ?>" aria-hidden="true">
+	<div class="modal fade" id="modal-<?php echo($post->post_name); ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo($post->post_title); ?>" aria-hidden="true">
 	  <div class="modal-dialog modal-dialog-centered" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
@@ -76,12 +76,12 @@ $availability = get_field("availability");
 	      </div>
 	      <div class="modal-body">
 	        <?php
-		        // gravity_form( 'Beer Finder', false, false, false, '', true );	
+		        gravity_form( 'Beer Finder', false, false, false, '', true );	
 			?>
 	      </div>
 	    </div>
 	  </div>
-	</div> -->
+	</div>
 	
 </article><!-- #post-## -->
 
