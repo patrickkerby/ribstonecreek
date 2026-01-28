@@ -26,11 +26,11 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">			
     <section class="intro row lazy">
       <div class="col-md-4">
-        <h3>Brewed in Edgerton, AB</h3>
+        <h3>Started in Edgerton, AB</h3>
         <h4>Population: 410</h4>
       </div>
       <div class="col-md-4">
-        <h3><?php echo $brewing; ?> years brewing</h3>
+        <h3>Moved to Lloydminster in 2023</h3>
         <h4>Doing what we love!</h4>
       </div>
       <div class="col-md-4">
@@ -72,9 +72,8 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
                   }
                 </style>
                 <h2>Abbey Lane</h2>
-                <span class="meta">$15 / 4 Pack</span>
                 <p style="color: #133349;">A classic British beer. Even with low alcohol content, our Abbey Lane English Mild carries the mild flavors of dark toast and roasted nuttiness solidly on its malt backbone. With enough bitterness to offset the malt character, Abbey Lane finishes clean and dry.</p>
-                <a href="https://ribstonecreekbrewery.ca/product/abbey-lane/" class="ghost">Order Online</a>
+                <a href="https://4thmeridianbrewing.com/shop/" target="_blank" class="ghost">Order Online</a>
               </div>
             </div>
           </div> 
@@ -103,9 +102,8 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
                   }
                 </style>
                 <h2>Old Man Winter Porter</h2>
-                <span class="meta">$15 / 6 Pack</span>
                 <p>Our Porter offers a pronounced chocolate & roast coffee notes, balanced by a light caramel sweetness. With a fruity & roasted aroma on the nose, this well-bodied brew is the perfect companion for a cold winter night.</p>
-                <a href="https://ribstonecreekbrewery.ca/product/old-man-winter-porter/" class="ghost">Order Online</a>
+                <a href="https://4thmeridianbrewing.com/shop/" target="_blank" class="ghost">Order Online</a>
               </div>
             </div>
           </div>
@@ -134,9 +132,8 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
                   }
                 </style>
                 <h2>Ribstone Creek Lager</h2>
-                <span class="meta">$15 / 6 Pack</span>
                 <p>Our Premium Lager displays sparkling clarity and a soft blanket of white head that combines an easy-drinking finish with micro-brewed attention to detail. The aroma offers delicate, grainy malt sweetness supplemented by a grassiness and hit of floral hoppiness.</p>
-                <a href="https://ribstonecreekbrewery.ca/product/lager/" class="ghost">Order Online</a>
+                <a href="https://4thmeridianbrewing.com/shop/" target="_blank" class="ghost">Order Online</a>
               </div>
             </div>
           </div>           
@@ -162,7 +159,7 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
         </a>
       </div>
       <div class="col-sm-6">
-        <a href="https://ribstonecreekbrewery.ca/store">
+        <a target="_blank" href="https://4thmeridianbrewing.com/shop/">
           <img src="app/themes/ribstonecreek/img/lager.jpg" alt="" />
           <div>
             <h3>General Store</h3>
@@ -172,13 +169,13 @@ $brewing = round($datediff / (60 * 60 * 24)/364.75, 4);
       </div>
     </section>
     <section class="visit row lazy justify-content-center">
-      <h2 class="col-md-12">We're moving!</h2>
+      <h2 class="col-md-12">We've moved!</h2>
       <div class="col-sm-8 col-md-7 map">
         <img width="630px" src="app/themes/ribstonecreek/img/map.png" alt="" />
       </div>
       <div class="col-sm-9 col-md-5">
         <p><strong>There will be many updates soon, so stay tuned.</strong></p>
-        <p>After 11 years in Edgerton, we're moving (but not far!). You'll be able to visit us soon in Lloydminster.</p>
+        <p>After 11 years in Edgerton we moved (but not far!). You can now visit us in Lloydminster.</p>
         <p>Follow us on social media, and check back often. Good things coming!</p>
         <br />
         <p><strong>Questions? Send us a message:</strong></p>

@@ -57,19 +57,19 @@ $footer_logo = get_field( 'footer_logo', 'option' );
 					<div class="col-sm-4 col-md">
 						<!-- p><strong>(780) 755-3008</strong></p>
 						<p>4924 51 Street, <br>Edgerton, AB, T0B 1K0</p -->
-						<p>We're moving to Lloydminster!</p>
+						<p>We've moved to Lloydminster!</p>
 						<p>Details coming soon.</p>
 					</div>
 					<div class="col-sm-4 col-md">
 						<p><strong>Direct Delivery</strong></p>
-						<p>Coming Soon</p>
+						<p><a href="https://4thmeridianbrewing.com/shop/" target="_blank">Available now!</a></p>
 					</div>
 					<div class="d-none d-md-flex col-md">
 						<img width="99px" src="/app/themes/ribstonecreek/img/rsc-logo-badge.png" alt="Ribstone Creek Brewery" />
 					</div>
 					<div class="col-sm-4 col-md">
-						<p><strong><?php echo $hours_title; ?></strong></p>
-						<p><?php echo $hours; ?></p>
+						<p>The Edgerton Taproom is permanently closed.</p>
+						<p></p>
 					</div>
 					<div class="col-sm-6 col-md">
 						<a href="/contact" class="email"><span>&#xf1d8;</span> Email</a>
